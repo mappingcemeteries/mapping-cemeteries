@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath:'' ,
   transpileDependencies: [
     'vuetify'
   ],
@@ -18,3 +19,4 @@ module.exports = {
   },
   lintOnSave: false
 }
+

@@ -22,7 +22,7 @@
                       <v-img
                         class="elevation-6"
                         alt=""
-                        src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                        src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
                       ></v-img>
                     </v-list-item-avatar>
                   </v-list-item>
@@ -62,10 +62,11 @@
                    <v-card-actions>
                   <v-list-item class="grow">
                     <v-list-item-avatar color="grey darken-3">
+                      <v-spacer></v-spacer>
                       <v-img
                         class="elevation-6"
                         alt=""
-                        src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                        src="https://upload.wikimedia.org/wikipedia/commons/7/7a/War_Memorial_Swords_Shield_Close-Up.png"
                       ></v-img>
                     </v-list-item-avatar>
                   </v-list-item>
@@ -99,10 +100,12 @@
             <v-col>
               <v-card class="ml-1 mr-1">
                 <v-card-title>
-                  <span class="title font-weight-bold">Asma N.</span>
+                  <span class="title font-weight-bold">Asma N.          </span>
+                  <v-spacer></v-spacer>
                    <v-card-actions>
                   <v-list-item class="grow">
                     <v-list-item-avatar color="grey darken-3">
+                        <v-spacer></v-spacer>
                       <v-img
                         class="elevation-6"
                         alt=""
@@ -192,7 +195,7 @@
                       <v-img
                         class="elevation-6"
                         alt=""
-                        src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
                       ></v-img>
                     </v-list-item-avatar>
                   </v-list-item>
