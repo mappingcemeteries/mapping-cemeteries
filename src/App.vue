@@ -14,6 +14,41 @@
     <v-main>
       <router-view></router-view>
     </v-main>
+    <v-footer
+    dark
+    fixed
+    height="60px"
+    width="200px"
+  >
+  <v-card
+      flat
+      tile
+      class="black lighten-1 white--text text-center"
+      fluid
+    >
+       <v-card-text>
+        <v-btn
+          v-for="icon in icons"
+          :key="icon"
+          class="white--text"
+          icon
+        >
+          <v-icon size="24px">
+            {{ icon }}
+          </v-icon>
+        </v-btn>
+      </v-card-text>
+
+      <!-- <v-card-text class="white--text pt-0">
+      </v-card-text>
+
+      <v-divider></v-divider>
+
+      <v-card-text class="white--text">
+        {{ new Date().getFullYear() }} — <strong></strong>
+      </v-card-text>  -->
+    </v-card> 
+  </v-footer>
   </v-app>
 </template>
 
@@ -23,7 +58,14 @@ export default {
 
   components: {},
 
-  data: () => ({}),
+
+  data: () => ({
+     icons: [
+        'mdi-facebook',
+        'fab fa-tiktok',
+        'mdi-instagram',
+      ],
+  }),
 };
 </script>
 
@@ -33,5 +75,8 @@ export default {
 }
 v-app{
   background-color: black;
+}
+v-footer{
+  margin-left: 1000px;
 }
 </style>

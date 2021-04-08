@@ -30,6 +30,10 @@
               src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
             />
             <img
+            v-if="n.Custodian == 'Nadia'"
+            src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
+            />
+            <img
               v-if="n.Custodian == 'Lisa'"
               src="https://upload.wikimedia.org/wikipedia/commons/7/7a/War_Memorial_Swords_Shield_Close-Up.png"
             />
@@ -37,12 +41,16 @@
               v-if="n.Custodian == 'Bri'"
               src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
             />
+            <img
+              v-if="n.Custodian == 'Asma N.'"
+              src="https://images.unsplash.com/photo-1606170300294-84f3213babe3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80"
+           />
           </v-avatar>
         </template>
         <template v-slot:opposite>
           <span>{{ n.Date }}</span>
         </template>
-        <v-card class="ml-14 mr-14" :id="n['Tag One']">
+        <v-card class="ml-14 mr-14" :id="n['Tag One'] + n['Date']">
           <v-img :src="n['Image Link']" height="150px"></v-img>
           <!-- <v-card-title class="headline"> {{ n.id }} </v-card-title> -->
           <v-card-text class="text--primary"
@@ -65,6 +73,12 @@
               v-if="n.Custodian == 'lane'"
               :x-small="$vuetify.breakpoint.smAndDown"
               to="/Rediscovered"
+              >Read More</v-btn
+            >
+             <v-btn
+              v-if="n.Custodian == 'Nadia'"
+              :x-small="$vuetify.breakpoint.smAndDown"
+              to="/Historical"
               >Read More</v-btn
             >
             <v-btn
@@ -106,6 +120,15 @@
                 v-if="n['Tag One'] == 'African'"
                 >{{ n["Tag One"] }}</v-btn
               >
+                <v-btn
+                x-small
+                class="btn-txt"
+                color="#C55"
+                v-show="$vuetify.breakpoint.mdAndUp"
+                align-right
+                v-if="n['Tag One'] == 'Historical'"
+                >{{ n["Tag One"] }}</v-btn
+              >
 
               <!-- <v-btn
                 x-small
@@ -129,6 +152,9 @@
               >
               </v-btn>
             </v-col>
+            <v-btn icon :id="n['Tag One'] + n['Date']" @click="pin" v-click-outside="onClickOutsideStandard">
+              <v-icon :id="n['Tag One'] + n['Date']">mdi-pin</v-icon>
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-timeline-item>
@@ -183,6 +209,12 @@ export default {
   },
 
   methods: {
+    pin(e) {
+      d3.selectAll(".circle" + e.target.id)
+        .style("fill", "red")
+        .style("r", 6)
+    },
+   
     redrawTimeline() {
       console.log("redrawing timeline");
       var parseDate = d3.timeParse("%Y");
@@ -271,27 +303,37 @@ export default {
           return "year" + d.Date;
         });
 
-      v_timeline.forEach(function (element, i) {
-        v_timeline_h.every(function (element_h, j) {
-          if (element_h.Date > element.Date) {
-            element.x =
-              (x(v_timeline_h[i + 1].Date) + x(v_timeline_h[i].Date)) / 2;
-            console.log(element.x);
-            return false;
-          }
-        });
+      v_timeline.forEach((element) => {
+        element.x = x(element.end) - x(element.start);
       });
 
-      for (var i = 0; i < v_timeline.length; i++) {
-          for (var j = 0; j < v_timeline_h.length; j++) {
-             if (v_timeline_h[j].Date > v_timeline[i].Date) {
-                v_timeline.x = (x(v_timeline_h[i + 1].Date) + x(v_timeline_h[i].Date)) / 2
-                break
-          }
-      }
-      }
+      // v_timeline.forEach(function (element, i) {
+      //   v_timeline_h.every(function (element_h, j) {
+      //     if (element_h.Date > element.Date) {
+      //       element.x =
+      //         (x(v_timeline_h[j].Date) + (x(v_timeline_h[j+1].Date) + x(v_timeline_h[j].Date))/2);
+      //       console.log(element.Date)
+      //       console.log(v_timeline_h[i])
+      //       console.log(element.x);
+      //       return false;
+      //     }
+      //   });
+      // });
 
-      console.log(v_timeline);
+      // for (var i = 1; i < v_timeline.length; i++) {
+      //   for (var j = 0; j < v_timeline_h.length; j++) {
+      //     if (v_timeline_h[j].Date > v_timeline[i].Date) {
+      //       console.log("horizontal date",v_timeline_h[i].Date);
+      //       console.log(v_timeline_h[j].Date, " ", v_timeline[i].Date);
+      //       v_timeline[i].x =
+      //         x(v_timeline_h[i].Date) +
+      //         (x(v_timeline_h[i].Date) - x(v_timeline_h[i - 1].Date)) / 2;
+      //       console.log(v_timeline_h.x);
+      //       break;
+      //     }
+      //   }
+      // }
+
       svg
         .selectAll("circle")
         .data(v_timeline)
@@ -299,13 +341,16 @@ export default {
         .style("stroke", "gray")
         .style("fill", "lightgray")
         .attr("r", 3)
-        .attr("cx", (d) => d.x)
-        .attr("cy", 70)
+        .attr("cx", (d) => x(d.Start) + (x(d.End) - x(d.Start)) / 2)
+        .attr("cy", function(d) {
+          if (d.y == 1) { return 70}
+          else { return 80}
+        })
+        .attr("class", (d) => "circle" + d["Tag One"] + d.Date)
         .on("mouseover", function (d) {
           d3.select(this).style("fill", "Red");
           d3.select(this).style("r", 5);
           d3.select(this).style("cursor", "pointer");
-          var element = document.getElementById("African");
         })
         .on("mouseout", function (d) {
           d3.select(this).style("fill", "lightgray");
@@ -313,7 +358,7 @@ export default {
         })
         .on("click", function (d) {
           d3.select(this).style("cursor", "pointer");
-          var element = document.getElementById(d["Tag One"]);
+          var element = document.getElementById(d["Tag One"] + d["Date"]);
           element.scrollIntoView({
             behavior: "smooth",
             block: "end",
@@ -328,7 +373,7 @@ export default {
       //   .attr("class", "label")
       //   .attr("x", (d) => x(d.Date)-20)
       //   .attr("y", (d) => 1)
-      //   .attr("transform", "rotate(-2)")
+      //   .attr("transform",+ "rotate(-2)")
       //   .text(d=>d["Tag Two"])
       //   .attr("dy", "6em")
       //   .style("text-anchor", "start")
