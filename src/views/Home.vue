@@ -9,7 +9,6 @@
 
 <script>
 import mapboxgl from "mapbox-gl";
-
 export default {
   name: "home",
   data() {
@@ -21,16 +20,17 @@ export default {
   mounted() {
     mapboxgl.accessToken = this.accessToken;
 
+
     var map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/nady196/ckm009izz785t17nlcbv8tqob",
       center: [-73.99, 40.72],
 
-      zoom: 12.66,
-      maxBounds: [
-        [-74.04728500751165, 40.68392799015035],
-        [-73.91058699000139, 40.87764500765852],
-      ],
+      zoom: 12.3,
+      // maxBounds: [
+      //   [-74.04728500751165, 40.68867929015035],
+      //   [-73.91058699000139, 40.87764500765852],
+      // ],
     });
 
     var popup = new mapboxgl.Popup({
@@ -41,7 +41,7 @@ export default {
     });
 
     map.on("load", function () {
-      map.on("mouseenter", "map-77bq60", function (e) {
+      map.on("mouseenter", "map-an0td9", function (e) {
         console.log("hover");
         map.getCanvas().style.cursor = "pointer";
 

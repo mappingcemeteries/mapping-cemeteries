@@ -9,26 +9,59 @@
         <v-tab> About the project </v-tab>
         <v-tab> About the Creators </v-tab>
         <v-tab> Contact Us </v-tab>
-        <v-tab-item> </v-tab-item>
+        <v-tab-item>
+          <h2 ></h2>
+          <v-row>
+            <v-col cols="12" md="4">
+              <v-img
+                height="350px" class="ml-10 mr-10"
+                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169326127_121021733399839_7468243779477365123_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=7rg1PK5pHZoAX92AKPi&_nc_ht=scontent-lga3-1.xx&oh=44711dff39685ba23c96864e1ef6afd7&oe=6097FA6B"
+              ></v-img>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-img
+                height="350px" class="ml-10 mr-10"
+                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/168751454_121021760066503_3231555397508698228_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=aCgK97xyC_gAX8tmzKd&_nc_ht=scontent-lga3-1.xx&oh=02d9ce97e97a15040251dfa9510e9d47&oe=6097D2B4"
+              ></v-img>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-img
+                height="350px" class="ml-10 mr-10"
+                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/168855656_121021820066497_3410991152136923722_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=qkEeEyHdhDgAX9yZTdJ&_nc_ht=scontent-lga3-1.xx&oh=ab552fec36d09083dacbab7da907f3b7&oe=60974965"
+              ></v-img>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-img
+                height="350px" class="ml-10 mr-10"
+                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169134219_121021796733166_3461938036758036341_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=QQuJLx3zEu4AX8J8z3Z&_nc_ht=scontent-lga3-1.xx&oh=cb4aac77515deacec82949b4e0685187&oe=609918CB"
+              ></v-img>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-img
+                height="350px" class="ml-10 mr-10"
+                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169558885_121021776733168_5936852692700829422_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=XljTMPDcklsAX8DZIkN&_nc_ht=scontent-lga3-1.xx&oh=60aaa31a2acefb9cfabb3b74f0441dab&oe=609856A3"
+              ></v-img>
+            </v-col>
+          </v-row>
+        </v-tab-item>
         <v-tab-item>
           <v-row>
             <v-col>
-              <v-card class="ml-1 mr-1">
+              <v-card class="ml-1 mr-1" height="100vh">
                 <v-card-title>
                   <span class="title font-weight-bold">Brianna Caszatt</span>
-                   <v-card-actions>
-                  <v-list-item class="grow">
-                    <v-list-item-avatar color="grey darken-3">
-                      <v-img
-                        class="elevation-6"
-                        alt=""
-                        src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
-                      ></v-img>
-                    </v-list-item-avatar>
-                  </v-list-item>
-                </v-card-actions>
+                  <v-card-actions>
+                    <v-list-item class="grow">
+                      <v-list-item-avatar color="grey darken-3">
+                        <v-img
+                          class="elevation-6"
+                          alt=""
+                          src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
+                        ></v-img>
+                      </v-list-item-avatar>
+                    </v-list-item>
+                  </v-card-actions>
                 </v-card-title>
-                
 
                 <v-card-text class="font-weight-light">
                   Brianna hails from Michigan but has called Queens home for
@@ -51,69 +84,66 @@
                   collection of a cemetery that was redeveloped and turned into
                   a public park: City Hall Park.
                 </v-card-text>
-
-               
               </v-card>
             </v-col>
             <v-col>
-              <v-card class="ml-1 mr-1">
+              <v-card class="ml-1 mr-1" height="100vh">
                 <v-card-title>
                   <span class="title font-weight-bold">Lisa Kofod</span>
-                   <v-card-actions>
-                  <v-list-item class="grow">
-                    <v-list-item-avatar color="grey darken-3">
-                      <v-spacer></v-spacer>
-                      <v-img
-                        class="elevation-6"
-                        alt=""
-                        src="https://upload.wikimedia.org/wikipedia/commons/7/7a/War_Memorial_Swords_Shield_Close-Up.png"
-                      ></v-img>
-                    </v-list-item-avatar>
-                  </v-list-item>
-                </v-card-actions>
+                  <v-card-actions>
+                    <v-list-item class="grow">
+                      <v-list-item-avatar color="grey darken-3">
+                        <v-spacer></v-spacer>
+                        <v-img
+                          class="elevation-6"
+                          alt=""
+                          src="https://upload.wikimedia.org/wikipedia/commons/7/7a/War_Memorial_Swords_Shield_Close-Up.png"
+                        ></v-img>
+                      </v-list-item-avatar>
+                    </v-list-item>
+                  </v-card-actions>
                 </v-card-title>
 
-                <v-card-text class="font-weight-light"> 
-                Lisa is a writer and producer, they are also a digital
-                humanities student working toward their Master of Arts in the
-                Digital Humanities at the Graduate Center of the City University
-                of New York (CUNY). A life-long New Yorker, they were drawn to
-                this project because of their love of New York City history and
-                their fascination with how we choose to remember those who came
-                before. How do we determine who “deserves” to be remembered?
-                What do those remembrances look like? How have these
-                remembrances changed over time? Their primary roles in this
-                project were site design and testing. This included working with
-                the developer on which platform to use and what frameworks to
-                apply, creating best practices for the incorporation of digital
-                assets, and testing the site as it was developed. Their
-                secondary roles were in documentation and research.
-                Documentation included tracking conversations during the
-                development stage and encouraging the team away from scope
-                creep. Research responsibilities included working on technical
-                options and scholarly research on a set of war memorials within
-                Manhattan.
+                <v-card-text class="font-weight-light">
+                  Lisa is a writer and producer, they are also a digital
+                  humanities student working toward their Master of Arts in the
+                  Digital Humanities at the Graduate Center of the City
+                  University of New York (CUNY). A life-long New Yorker, they
+                  were drawn to this project because of their love of New York
+                  City history and their fascination with how we choose to
+                  remember those who came before. How do we determine who
+                  “deserves” to be remembered? What do those remembrances look
+                  like? How have these remembrances changed over time? Their
+                  primary roles in this project were site design and testing.
+                  This included working with the developer on which platform to
+                  use and what frameworks to apply, creating best practices for
+                  the incorporation of digital assets, and testing the site as
+                  it was developed. Their secondary roles were in documentation
+                  and research. Documentation included tracking conversations
+                  during the development stage and encouraging the team away
+                  from scope creep. Research responsibilities included working
+                  on technical options and scholarly research on a set of war
+                  memorials within Manhattan.
                 </v-card-text>
-            
               </v-card>
             </v-col>
             <v-col>
-              <v-card class="ml-1 mr-1">
+              <v-card class="ml-1 mr-1" height="100vh">
                 <v-card-title>
-                  <span class="title font-weight-bold">Asma N.          </span>
+                  <span class="title font-weight-bold">Asma N. </span>
                   <v-spacer></v-spacer>
-                   <v-card-actions>
-                  <v-list-item class="grow">
-                    <v-list-item-avatar color="grey darken-3">
+                  <v-card-actions>
+                    <v-list-item class="grow">
+                      <v-list-item-avatar color="grey darken-3">
                         <v-spacer></v-spacer>
-                      <v-img
-                        class="elevation-6"
-                        alt=""
-                        src="https://images.unsplash.com/photo-1606170300294-84f3213babe3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80"
-                      ></v-img>
-                    </v-list-item-avatar>
-                  </v-list-item>
-                </v-card-actions>
+                        <v-img
+                          class="elevation-6"
+                          alt=""
+                          src="https://images.unsplash.com/photo-1606170300294-84f3213babe3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80"
+                        ></v-img>
+                      </v-list-item-avatar>
+                    </v-list-item>
+                  </v-card-actions>
                 </v-card-title>
 
                 <v-card-text class="font-weight-light">
@@ -145,25 +175,23 @@
                   the head and the heart that speak to love, wellness, and
                   Halloween (her favorite time of year).
                 </v-card-text>
-
-                
               </v-card>
             </v-col>
             <v-col>
-              <v-card class="ml-1 mr-1">
+              <v-card class="ml-1 mr-1" height="100vh">
                 <v-card-title>
                   <span class="title font-weight-bold">Nadia El Mouldi</span>
-                   <v-card-actions>
-                  <v-list-item class="grow">
-                    <v-list-item-avatar color="grey darken-3">
-                      <v-img
-                        class="elevation-6"
-                        alt=""
-                        src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
-                      ></v-img>
-                    </v-list-item-avatar>
-                  </v-list-item>
-                </v-card-actions>
+                  <v-card-actions>
+                    <v-list-item class="grow">
+                      <v-list-item-avatar color="grey darken-3">
+                        <v-img
+                          class="elevation-6"
+                          alt=""
+                          src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
+                        ></v-img>
+                      </v-list-item-avatar>
+                    </v-list-item>
+                  </v-card-actions>
                 </v-card-title>
 
                 <v-card-text class="font-weight-light">
@@ -182,24 +210,23 @@
                   portion of the research and data collection, pertaining to
                   historic cemeteries in New York City.
                 </v-card-text>
-
               </v-card>
             </v-col>
             <v-col>
-              <v-card class="ml-1 mr-1">
+              <v-card class="ml-1 mr-1" height="100vh">
                 <v-card-title>
                   <span class="title font-weight-bold">Lane Vineyard</span>
-                   <v-card-actions>
-                  <v-list-item class="grow">
-                    <v-list-item-avatar color="grey darken-3">
-                      <v-img
-                        class="elevation-6"
-                        alt=""
-                        src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
-                      ></v-img>
-                    </v-list-item-avatar>
-                  </v-list-item>
-                </v-card-actions>
+                  <v-card-actions>
+                    <v-list-item class="grow">
+                      <v-list-item-avatar color="grey darken-3">
+                        <v-img
+                          class="elevation-6"
+                          alt=""
+                          src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
+                        ></v-img>
+                      </v-list-item-avatar>
+                    </v-list-item>
+                  </v-card-actions>
                 </v-card-title>
 
                 <v-card-text class="font-weight-light">
@@ -219,11 +246,44 @@
                   that was repurposed, rediscovered, and now exists again as
                   both a cemetery and national monument
                 </v-card-text>
-
-               
               </v-card>
             </v-col>
           </v-row>
+        </v-tab-item>
+        <v-tab-item class="form" height="1000px">
+          <form height="500px" class="mr-15 ml-15">
+            <v-text-field
+              v-model="name"
+              :error-messages="nameErrors"
+              :counter="10"
+              label="Name"
+              required
+              @input="$v.name.$touch()"
+              @blur="$v.name.$touch()"
+            ></v-text-field>
+            <v-text-field
+              v-model="email"
+              :error-messages="emailErrors"
+              label="E-mail"
+              required
+              @input="$v.email.$touch()"
+              @blur="$v.email.$touch()"
+            ></v-text-field>
+            <v-text-field dense
+              v-model="message"
+              label="message"
+              required
+              @input="$v.message.$touch()"
+              @blur="$v.message.$touch()"
+            ></v-text-field>
+            <v-btn class="mr-4" @click="submit"> submit </v-btn>
+            <v-btn @click="clear"> clear </v-btn>
+          </form>
+        </v-tab-item></v-tabs
+      ></v-card
+    >
+  </div>
+</template>
         </v-tab-item>
       </v-tabs>
     </v-card>
@@ -232,14 +292,72 @@
 
 
 <script>
+import { validationMixin } from "vuelidate";
+import { required, maxLength, email } from "vuelidate/lib/validators";
+
 export default {
+  mixins: [validationMixin],
+
+  validations: {
+    name: { required, maxLength: maxLength(10) },
+    email: { required, email },
+    select: { required },
+    checkbox: {
+      checked(val) {
+        return val;
+      },
+    },
+  },
   data() {
     return {
+      name: "",
+      email: "",
+      message: "",
       tab: null,
       items: ["About the Project", "About the Creators", "Contact Us"],
       text:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     };
   },
+    computed: {
+      checkboxErrors () {
+        const errors = []
+        if (!this.$v.checkbox.$dirty) return errors
+        !this.$v.checkbox.checked && errors.push('You must agree to continue!')
+        return errors
+      },
+      nameErrors () {
+        const errors = []
+        if (!this.$v.name.$dirty) return errors
+        !this.$v.name.maxLength && errors.push('Name must be at most 10 characters long')
+        !this.$v.name.required && errors.push('Name is required.')
+        return errors
+      },
+      emailErrors () {
+        const errors = []
+        if (!this.$v.email.$dirty) return errors
+        !this.$v.email.email && errors.push('Must be valid e-mail')
+        !this.$v.email.required && errors.push('E-mail is required')
+        return errors
+      },
+    },
+  methods: {
+      submit () {
+        this.$v.$touch()
+      },
+      clear () {
+        this.$v.$reset()
+        this.name = ''
+        this.email = ''
+        this.select = null
+        this.checkbox = false
+      },
+  },
 };
 </script>
+
+<style>
+.form {
+  height: 1000px;
+}
+</style>

@@ -152,8 +152,8 @@
               >
               </v-btn>
             </v-col>
-            <v-btn icon :id="n['Tag One'] + n['Date']" @click="pin" v-click-outside="onClickOutsideStandard">
-              <v-icon :id="n['Tag One'] + n['Date']">mdi-pin</v-icon>
+            <v-btn icon :id="n['Tag One'] + n['Date']" @click="pin">
+              <v-icon class="pin-icon" :id="n['Tag One'] + n['Date']">mdi-pin</v-icon>
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -365,29 +365,6 @@ export default {
             inline: "nearest",
           });
         });
-
-      // svg
-      //   .selectAll("g.rect")
-      //   .data(v_timeline_h)
-      //   .join("text")
-      //   .attr("class", "label")
-      //   .attr("x", (d) => x(d.Date)-20)
-      //   .attr("y", (d) => 1)
-      //   .attr("transform",+ "rotate(-2)")
-      //   .text(d=>d["Tag Two"])
-      //   .attr("dy", "6em")
-      //   .style("text-anchor", "start")
-      //   .style("font-size", "12px")
-      //   .on("click", function (d) {
-      //     d3.select(this).style("color", "Red");
-      //     d3.select(this).style("cursor", "pointer");
-      //     var element = document.getElementById("African");
-      //     element.scrollIntoView({
-      //       behavior: "smooth",
-      //       block: "end",
-      //       inline: "nearest",
-      //     });
-      //   });
     },
   },
 };
@@ -405,5 +382,10 @@ export default {
 .btn-txt {
   font-size: 2px;
   right: 1px;
+}
+.pin-icon {
+    border-radius: 100%;
+    background-color: lightgray;
+    stroke: darkgray;
 }
 </style>

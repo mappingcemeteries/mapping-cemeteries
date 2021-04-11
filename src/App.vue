@@ -62,7 +62,7 @@ export default {
   data: () => ({
      icons: [
         'mdi-facebook',
-        'fab fa-tiktok',
+        'mdi-wordpress',
         'mdi-instagram',
       ],
   }),
