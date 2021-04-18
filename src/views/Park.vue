@@ -1,6 +1,6 @@
 <template>
-  <div class="warMemorial">
-    <v-timeline dense class="pa-md-16 mx-lg-auto">
+  <div class="Park">
+    <v-timeline dense class="mx-lg-auto">
       <v-timeline-item
         v-for="(n, i) in data"
         :key="i"
@@ -21,7 +21,7 @@
             </v-list-item-avatar>
             <v-list-item-content>
               <div class="overline mb-4">Year</div>
-              <v-list-item-title class="headline mb-1 pink--text">{{
+              <v-list-item-title class="headline mb-1">{{
                 n.title
               }}</v-list-item-title>
               <v-list-item-title class="title mb-1">{{

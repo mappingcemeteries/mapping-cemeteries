@@ -71,7 +71,9 @@ export default {
   width: 100%;
   height: 100%;
 }
-
+p {
+  font-family: 'Montserrat';
+}
 .text-box {
   height: 100px;
   width: 200px;

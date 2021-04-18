@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
     <v-app-bar app color="black" dark>
-      <v-toolbar-title x-large color="white"
+      <v-toolbar-title x-large color="white" class="headline"
         >Mapping Cemeteries</v-toolbar-title
       >
       <v-btn small plain text dark elevation="5" class="ml-auto" to="/"
@@ -14,7 +14,7 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <v-footer
+    <!-- <v-footer
     dark
     fixed
     height="60px"
@@ -37,7 +37,7 @@
             {{ icon }}
           </v-icon>
         </v-btn>
-      </v-card-text>
+      </v-card-text> -->
 
       <!-- <v-card-text class="white--text pt-0">
       </v-card-text>
@@ -47,8 +47,8 @@
       <v-card-text class="white--text">
         {{ new Date().getFullYear() }} — <strong></strong>
       </v-card-text>  -->
-    </v-card> 
-  </v-footer>
+    <!-- </v-card> 
+  </v-footer> -->
   </v-app>
 </template>
 
@@ -70,6 +70,7 @@ export default {
 </script>
 
 <style>
+
 .routerLink {
   text-decoration: none;
 }

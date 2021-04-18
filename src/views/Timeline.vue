@@ -1,6 +1,6 @@
 <template>
   <div class="timeline">
-    <v-app-bar height="150" window light>
+    <v-app-bar height="120" window dark>
       <div
         id="res"
         style="
@@ -21,39 +21,45 @@
     <v-timeline
       :dense="$vuetify.breakpoint.mdAndDown"
       class="pa-md-16 mx-lg-auto"
+      dark
     >
       <v-timeline-item v-for="(n, i) in v_timeline" :key="i" large>
         <template v-slot:icon>
-          <v-avatar>
+          <v-avatar >
             <img
               v-if="n.Custodian == 'lane'"
+              @click="goToAfrican"
               src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
             />
             <img
-            v-if="n.Custodian == 'Nadia'"
-            src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
+              v-if="n.Custodian == 'Nadia'"
+              @click="goToHistorical"
+              src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
             />
             <img
               v-if="n.Custodian == 'Lisa'"
+              @click="goToWar"
               src="https://upload.wikimedia.org/wikipedia/commons/7/7a/War_Memorial_Swords_Shield_Close-Up.png"
             />
             <img
               v-if="n.Custodian == 'Bri'"
+              @click="goToPark"
               src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
             />
             <img
               v-if="n.Custodian == 'Asma N.'"
+              @click="goToHidden"
               src="https://images.unsplash.com/photo-1606170300294-84f3213babe3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80"
-           />
+            />
           </v-avatar>
         </template>
-        <template v-slot:opposite>
+        <template v-slot:opposite >
           <span>{{ n.Date }}</span>
         </template>
         <v-card class="ml-14 mr-14" :id="n['Tag One'] + n['Date']">
           <v-img :src="n['Image Link']" height="150px"></v-img>
           <!-- <v-card-title class="headline"> {{ n.id }} </v-card-title> -->
-          <v-card-text class="text--primary"
+          <v-card-text class="text--light"
             ><div>{{ n.Caption }}</div>
           </v-card-text>
           <v-card-actions>
@@ -75,7 +81,7 @@
               to="/Rediscovered"
               >Read More</v-btn
             >
-             <v-btn
+            <v-btn
               v-if="n.Custodian == 'Nadia'"
               :x-small="$vuetify.breakpoint.smAndDown"
               to="/Historical"
@@ -99,7 +105,7 @@
                 v-show="$vuetify.breakpoint.mdAndUp"
                 align-right
                 v-if="n['Tag One'] == 'Park'"
-                @click="filtered_timeline($event)"
+                @click.prevent="filter('park')"
                 >{{ n["Tag One"] }}</v-btn
               >
               <v-btn
@@ -109,6 +115,7 @@
                 v-show="$vuetify.breakpoint.mdAndUp"
                 align-right
                 v-if="n['Tag One'] == 'War'"
+                @click.prevent="filter('war')"
                 >{{ n["Tag One"] }}</v-btn
               >
               <v-btn
@@ -118,15 +125,17 @@
                 v-show="$vuetify.breakpoint.mdAndUp"
                 align-right
                 v-if="n['Tag One'] == 'African'"
+                @click.prevent="filter('african')"
                 >{{ n["Tag One"] }}</v-btn
               >
-                <v-btn
+              <v-btn
                 x-small
                 class="btn-txt"
                 color="#C55"
                 v-show="$vuetify.breakpoint.mdAndUp"
                 align-right
                 v-if="n['Tag One'] == 'Historical'"
+                @click.prevent="filter('historical')"
                 >{{ n["Tag One"] }}</v-btn
               >
 
@@ -137,7 +146,7 @@
                 v-show="$vuetify.breakpoint.mdAndUp"
                 >{{ n['Tag Two'] }}
               </v-btn> -->
-              <v-btn
+              <!-- <v-btn
                 x-small
                 class="btn-txt"
                 color="#BBD"
@@ -150,10 +159,12 @@
                 color="#29B"
                 v-show="$vuetify.breakpoint.smAndDown"
               >
-              </v-btn>
+              </v-btn> -->
             </v-col>
             <v-btn icon :id="n['Tag One'] + n['Date']" @click="pin">
-              <v-icon class="pin-icon" :id="n['Tag One'] + n['Date']">mdi-pin</v-icon>
+              <v-icon color="#A9A9A9" class="pin-icon" :id="n['Tag One'] + n['Date']"
+                >mdi-pin</v-icon
+              >
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -182,7 +193,7 @@ export default {
   data: function () {
     return {
       v_timeline,
-      userFilterKey: "all",
+      
     };
   },
   mounted() {
@@ -190,31 +201,35 @@ export default {
     this.redrawTimeline();
     window.addEventListener("resize", this.redrawTimeline);
   },
-  computed: {
-    // userFilter() {
-    //   console.log("userfilterkey"  + this[this.userFilterKey])
-    //   return this[this.userFilterKey];
-    // },
-    // all() {
-    //   return this.v_timeline
-    // },
-    // park() {
-    //   return this.v_timeline.filter((user) => user.Custodian == "Bri")
-    // }
-    // filterPark() {
-    //   return this.v_timeline.filter((item) => {
-    //     return item["Tag One"].toLowerCase() == "park";
-    //   });
-    // },
-  },
+  computed: {},
 
   methods: {
+    filter: function (name) {
+      this.v_timeline =  this.v_timeline.filter((item) => {
+        return item["Tag One"].toLowerCase() == name;
+      });
+    },
+    goToWar() {
+      this.$router.push("/WarMemorial");
+    },
+    goToPark() {
+      this.$router.push("/Park");
+    },
+    goToAfrican() {
+      this.$router.push("/Rediscovered");
+    },
+    goToHistorical() {
+      this.$router.push("/Historical");
+    },
+    goToHidden() {
+      this.$router.push("/Hidden");
+    },
     pin(e) {
       d3.selectAll(".circle" + e.target.id)
         .style("fill", "red")
-        .style("r", 6)
+        .style("r", 6);
     },
-   
+
     redrawTimeline() {
       console.log("redrawing timeline");
       var parseDate = d3.timeParse("%Y");
@@ -240,20 +255,21 @@ export default {
 
       svg
         .append("g")
-        .attr("class", "x axis")
+        .attr("class", "x axis body")
         .attr("transform", "translate(0, 50)")
         .call(xAxis.ticks(null).tickSize(0))
         .selectAll("text")
-        .attr("y", 10)
-        .attr("x", -40)
+        .attr("y", -15)
+        .attr("x", 15)
         .attr("dy", ".5em")
-        .attr("transform", "rotate(90)")
+        .attr("transform", "rotate(-90)")
         .style("text-anchor", "start")
         .style("font-size", "12px")
         .style("font-weight", "bold")
         .data(v_timeline_h)
         .on("mouseover", function (d) {
-          d3.select(this).style("color", "Red");
+          console.log("over");
+          d3.select(this).style("color", "lightgrey");
           d3.select(this).style("font-size", "15px");
           d3.select(this).style("cursor", "pointer");
           tooltip.style("opacity", 0.9);
@@ -265,7 +281,7 @@ export default {
         .on("mouseout", function (d) {
           tooltip.style("opacity", 0);
           d3.select(this).style("font-size", "12px");
-          d3.select(this).style("color", "Black");
+          d3.select(this).style("color", "white");
         });
 
       var rectG = svg.selectAll("bar").data(v_timeline_h).enter().append("g");
@@ -287,7 +303,7 @@ export default {
           return "White";
         })
         .style("stroke", function (d) {
-          return "Black";
+          return "White";
         })
         .attr("x", function (d) {
           return x(d.Date);
@@ -340,11 +356,14 @@ export default {
         .join("circle")
         .style("stroke", "gray")
         .style("fill", "lightgray")
-        .attr("r", 3)
+        .attr("r", (d) => {if (d.Date == null) {return 0} else return 3})
         .attr("cx", (d) => x(d.Start) + (x(d.End) - x(d.Start)) / 2)
-        .attr("cy", function(d) {
-          if (d.y == 1) { return 70}
-          else { return 80}
+        .attr("cy", function (d) {
+          if (d.y == 1) {
+            return 70;
+          } else {
+            return 80;
+          }
         })
         .attr("class", (d) => "circle" + d["Tag One"] + d.Date)
         .on("mouseover", function (d) {
@@ -376,6 +395,9 @@ export default {
   position: fixed;
   z-index: 90;
 }
+.body {
+  font-family: 'Montserrat';
+}
 .axis {
   stroke-width: 1px;
 }
@@ -384,8 +406,13 @@ export default {
   right: 1px;
 }
 .pin-icon {
-    border-radius: 100%;
-    background-color: lightgray;
-    stroke: darkgray;
+  border-radius: 100%;
+  background-color: lightgray;
+  stroke: darkgray;
+  fill: black;
+}
+
+.v-timeline::before {
+    background: red;
 }
 </style>

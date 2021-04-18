@@ -1,5 +1,6 @@
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 module.exports = {
-  publicPath:'' ,
+  publicPath: '',
   transpileDependencies: [
     'vuetify'
   ],
@@ -17,6 +18,6 @@ module.exports = {
       })
       .end();
   },
-  lintOnSave: false
+  lintOnSave: false,
 }
 
