@@ -1,16 +1,7 @@
 <template>
   <div class="timeline">
-    <v-app-bar height="120" window dark>
-      <div
-        id="res"
-        style="
-          width: 1200px;
-          padding-left: 50px;
-          padding-right: 50px;
-          position: fixed;
-          z-index: 100;
-        "
-      ></div>
+    <v-app-bar height="120" width="2000" window dark>
+      <div id="res" style="width: 100%; ; z-index: 10000"></div>
     </v-app-bar>
     <br />
     <br />
@@ -25,7 +16,7 @@
     >
       <v-timeline-item v-for="(n, i) in v_timeline" :key="i" large>
         <template v-slot:icon>
-          <v-avatar >
+          <v-avatar>
             <img
               v-if="n.Custodian == 'lane'"
               @click="goToAfrican"
@@ -53,7 +44,7 @@
             />
           </v-avatar>
         </template>
-        <template v-slot:opposite >
+        <template v-slot:opposite>
           <span>{{ n.Date }}</span>
         </template>
         <v-card class="ml-14 mr-14" :id="n['Tag One'] + n['Date']">
@@ -162,7 +153,10 @@
               </v-btn> -->
             </v-col>
             <v-btn icon :id="n['Tag One'] + n['Date']" @click="pin">
-              <v-icon color="#A9A9A9" class="pin-icon" :id="n['Tag One'] + n['Date']"
+              <v-icon
+                color="#A9A9A9"
+                class="pin-icon"
+                :id="n['Tag One'] + n['Date']"
                 >mdi-pin</v-icon
               >
             </v-btn>
@@ -193,11 +187,10 @@ export default {
   data: function () {
     return {
       v_timeline,
-      
     };
   },
   mounted() {
-    var svg = d3.select("#res").append("svg").attr("viewBox", "0 0 1000 100");
+    var svg = d3.select("#res").append("svg").attr("viewBox", "0 0 1500 100");
     this.redrawTimeline();
     window.addEventListener("resize", this.redrawTimeline);
   },
@@ -205,7 +198,7 @@ export default {
 
   methods: {
     filter: function (name) {
-      this.v_timeline =  this.v_timeline.filter((item) => {
+      this.v_timeline = this.v_timeline.filter((item) => {
         return item["Tag One"].toLowerCase() == name;
       });
     },
@@ -234,7 +227,7 @@ export default {
       console.log("redrawing timeline");
       var parseDate = d3.timeParse("%Y");
       d3.select("#res").selectAll("svg").remove();
-      var svg = d3.select("#res").append("svg").attr("viewBox", "0 0 1000 100");
+      var svg = d3.select("#res").append("svg").attr("viewBox", "0 0 "+ 0.8*window.innerWidth + " 100");
 
       var x = d3
         .scaleBand()
@@ -259,23 +252,23 @@ export default {
         .attr("transform", "translate(0, 50)")
         .call(xAxis.ticks(null).tickSize(0))
         .selectAll("text")
-        .attr("y", -15)
-        .attr("x", 15)
+        .attr("y", -window.innerWidth / 100)
+        .attr("x", window.innerWidth / 100)
         .attr("dy", ".5em")
         .attr("transform", "rotate(-90)")
         .style("text-anchor", "start")
         .style("font-size", "12px")
         .style("font-weight", "bold")
         .data(v_timeline_h)
-        .on("mouseover", function (d) {
+        .on("mousemove", function (d) {
           console.log("over");
           d3.select(this).style("color", "lightgrey");
           d3.select(this).style("font-size", "15px");
           d3.select(this).style("cursor", "pointer");
           tooltip.style("opacity", 0.9);
           tooltip
-            .html(d.Caption)
-            .style("left", d3.event.pageX + "px")
+            .text(d.Caption)
+            .style("left", d3.event.pageX + 20 + "px")
             .style("top", d3.event.pageY - 28 + "px");
         })
         .on("mouseout", function (d) {
@@ -289,7 +282,6 @@ export default {
       var tooltip = d3
         .select("body")
         .append("div")
-        .attr("class", "d3-tooltip")
         .style("position", "absolute")
         .style("z-index", "1000")
         .style("padding", "10px")
@@ -356,7 +348,11 @@ export default {
         .join("circle")
         .style("stroke", "gray")
         .style("fill", "lightgray")
-        .attr("r", (d) => {if (d.Date == null) {return 0} else return 3})
+        .attr("r", (d) => {
+          if (d.Date == null) {
+            return 0;
+          } else return 3;
+        })
         .attr("cx", (d) => x(d.Start) + (x(d.End) - x(d.Start)) / 2)
         .attr("cy", function (d) {
           if (d.y == 1) {
@@ -396,7 +392,7 @@ export default {
   z-index: 90;
 }
 .body {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 .axis {
   stroke-width: 1px;
@@ -413,6 +409,6 @@ export default {
 }
 
 .v-timeline::before {
-    background: red;
+  background: red;
 }
 </style>
