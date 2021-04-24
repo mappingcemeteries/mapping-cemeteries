@@ -89,6 +89,10 @@
             <v-spacer></v-spacer>
 
             <v-col justify-space-between cols="7">
+              <v-btn-toggle
+          v-model="toggle_exclusive"
+          multiple
+        >
               <v-btn
                 x-small
                 class="btn-txt"
@@ -129,6 +133,7 @@
                 @click.prevent="filter('historical')"
                 >{{ n["Tag One"] }}</v-btn
               >
+              </v-btn-toggle>
 
               <!-- <v-btn
                 x-small
@@ -227,7 +232,10 @@ export default {
       console.log("redrawing timeline");
       var parseDate = d3.timeParse("%Y");
       d3.select("#res").selectAll("svg").remove();
-      var svg = d3.select("#res").append("svg").attr("viewBox", "0 0 "+ 0.8*window.innerWidth + " 100");
+      var svg = d3
+        .select("#res")
+        .append("svg")
+        .attr("viewBox", "0 0 " + 0.8 * window.innerWidth + " 100");
 
       var x = d3
         .scaleBand()
@@ -265,11 +273,11 @@ export default {
           d3.select(this).style("color", "lightgrey");
           d3.select(this).style("font-size", "15px");
           d3.select(this).style("cursor", "pointer");
-          tooltip.style("opacity", 0.9);
+          tooltip.style("opacity", 1);
           tooltip
             .text(d.Caption)
             .style("left", d3.event.pageX + 20 + "px")
-            .style("top", d3.event.pageY - 28 + "px");
+            .style("top", d3.event.pageY - 50 + "px");
         })
         .on("mouseout", function (d) {
           tooltip.style("opacity", 0);
@@ -285,9 +293,9 @@ export default {
         .style("position", "absolute")
         .style("z-index", "1000")
         .style("padding", "10px")
-        .style("background", "rgba(0,0,0,0.6)")
+        .style("background", "white")
         .style("border-radius", "4px")
-        .style("color", "#fff");
+        .style("color", "black");
 
       rectG
         .append("rect")

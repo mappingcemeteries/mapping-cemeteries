@@ -14,41 +14,24 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <!-- <v-footer
-    dark
-    fixed
-    height="60px"
-    width="200px"
-  >
-  <v-card
-      flat
-      tile
-      class="black lighten-1 white--text text-center"
-      fluid
-    >
-       <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="white--text"
-          icon
-        >
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
-      </v-card-text> -->
+    <v-footer dark fixed height="auto" width="30%">
+      <v-card  tile class="">
+        <v-card-text>
+          <v-btn
+            v-for="(icon, i) in icons"
+            :key="i"
+            :href="icon.link"
+            class="mx-3 white--text"
+            icon
+            target="_blank"
+          >
+            <v-icon size="24px">{{ icon.i }}</v-icon>
+          </v-btn>
+        </v-card-text>
 
-      <!-- <v-card-text class="white--text pt-0">
-      </v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong></strong>
-      </v-card-text>  -->
-    <!-- </v-card> 
-  </v-footer> -->
+        <v-divider></v-divider>
+      </v-card>
+    </v-footer>
   </v-app>
 </template>
 
@@ -58,26 +41,24 @@ export default {
 
   components: {},
 
-
   data: () => ({
-     icons: [
-        'mdi-facebook',
-        'mdi-wordpress',
-        'mdi-instagram',
-      ],
+    icons: [
+      { i: "fab fa-facebook", link: "https://www.facebook.com/mappingcemeteriesnyc" },
+      { i: "fab fa-instagram", link: "https://www.instagram.com/mappingcemeteries/" },
+      { i: "fab fa-tiktok", link: "https://www.tiktok.com/@mappingcemeteries?lang=en" },
+      { i: "fab fa-wordpress", link: "https://mappingcemeteries.commons.gc.cuny.edu/" },
+    ],
   }),
 };
 </script>
 
 <style>
-
 .routerLink {
   text-decoration: none;
 }
-v-app{
+v-app {
   background-color: black;
 }
-v-footer{
-  margin-left: 1000px;
+v-footer {
 }
 </style>

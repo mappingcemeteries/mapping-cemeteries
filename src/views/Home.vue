@@ -1,7 +1,7 @@
 <template>
     <div id="map" class="home">
       <div class="text-box">
-      <p>This website is under construction. Head over <a href= https://mappingcemeteries.commons.gc.cuny.edu/>here</a> to learn more.</p>
+      <p>This website is under construction. Head over <a href= https://mappingcemeteries.commons.gc.cuny.edu/ target="_blank">here</a> to learn more.</p>
     </div>
     </div>
 
@@ -20,7 +20,6 @@ export default {
   mounted() {
     mapboxgl.accessToken = this.accessToken;
 
-
     var map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/nady196/ckm009izz785t17nlcbv8tqob",
@@ -37,10 +36,18 @@ export default {
       offset: [0, -7],
       closeButton: false,
       closeOnClick: false,
-      className:'pop-up'
+      className: "pop-up",
     });
 
     map.on("load", function () {
+      map.on("click", "map-an0td9", function (e) {
+        var caption = e.features[0].properties.Caption;
+        if (caption == "New York Marble Cemetery") { window.location.href = '#/Historical'
+        } else if (caption == "African Burial Ground National Monument") {window.location.href = '#/Rediscovered'
+        } else if (caption == "City Hall Park") { window.location.href = '#/Park'
+        } else if (caption == "General Worth Monument") { window.location.href = '#/WarMemorial'
+        }
+      });
       map.on("mouseenter", "map-an0td9", function (e) {
         console.log("hover");
         map.getCanvas().style.cursor = "pointer";
@@ -72,7 +79,7 @@ export default {
   height: 100%;
 }
 p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 .text-box {
   height: 100px;
