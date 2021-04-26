@@ -1,10 +1,13 @@
 <template>
   <div class="Rediscovered">
-    <v-timeline dense class="mx-lg-auto">
+    <v-card>
+      <v-card-title class="justify-center">African Burial Ground: For All Those Who Were Not Forgotten </v-card-title>
+    </v-card>
+    <v-timeline dense dark class="mx-lg-auto">
       <v-timeline-item
-        v-for="(n, i) in data"
+        v-for="(n, i) in rediscovered"
         :key="i"
-        :color="data.color"
+        v-if="i!=0"
         small
       >
         <template v-slot:icon>
@@ -14,20 +17,35 @@
             />
           </v-avatar>
         </template>
-        <v-card class="mx-auto" outlined>
+        <v-card class="mx-auto" outlined >
           <v-list-item>
-            <v-list-item-avatar tile size="300" color="grey" :src="n.img">
-              <v-img :src="n.img"></v-img>
+            <v-list-item-avatar
+              tile
+              size="300"
+              color="grey"
+              :src="n['Image Link']"
+              v-if="n['Image Link']"
+            >
+              <v-img :src="n['Image Link']"></v-img>
             </v-list-item-avatar>
             <v-list-item-content>
-              <div class="overline mb-4">Year</div>
+              <div class="overline mb-4"></div>
               <v-list-item-title class="headline mb-1">{{
-                n.title
+                n.Title
               }}</v-list-item-title>
-              <v-list-item-title class="title mb-1">{{
-                n.title
+              <div>{{ n['Text Box'] }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle1
               }}</v-list-item-title>
-              <div>{{ n.description }}</div>
+              <div>{{ n.SubText1 }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle2
+              }}</v-list-item-title>
+              <div>{{ n.SubText2 }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle3
+              }}</v-list-item-title>
+              <div>{{ n.SubText3}}</div>
             </v-list-item-content>
           </v-list-item>
         </v-card>
@@ -38,80 +56,19 @@
 
 
 <script>
-import park from "../../public/park.csv";
+import rediscovered from "../../public/rediscovered.csv";
 
 export default {
   lintOnSave: false,
-  name: "Park",
+  name: "Rediscovered",
   components: {},
   data: function () {
     return {
-      park,
-      data: [
-        {
-          year: "",
-          title: "",
-          description: "",
-          img: "",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          year: "",
-          title: "",
-          description: "",
-          img: "",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          title: "The Barracks",
-          description: " ",
-          img: "",
-          subtitle_1: "",
-          description_1: " ",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          year: "",
-          title: "",
-          description: "",
-          img: "",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          year: "",
-          title: "",
-          description: "",
-          img: "",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-      ],
+      rediscovered,
     };
   },
   mounted() {
-    console.log(park);
+  
   },
 };
 </script>

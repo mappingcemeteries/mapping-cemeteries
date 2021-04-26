@@ -1,33 +1,51 @@
 <template>
   <div class="Historical">
-    <v-timeline dense class="mx-lg-auto">
+    <v-card>
+      <v-card-title class="justify-center">New York Marble Cemetery</v-card-title>
+    </v-card>
+    <v-timeline dark dense class="mx-lg-auto">
       <v-timeline-item
-        v-for="(n, i) in data"
+        v-for="(n, i) in historical"
         :key="i"
-        :color="data.color"
+        v-if="i!=0"
         small
       >
         <template v-slot:icon>
           <v-avatar>
             <img
-              src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
+              src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
             />
           </v-avatar>
         </template>
-        <v-card class="mx-auto" outlined>
+        <v-card class="mx-auto" outlined >
           <v-list-item>
-            <v-list-item-avatar tile size="300" color="grey" :src="n.img">
-              <v-img :src="n.img"></v-img>
+            <v-list-item-avatar
+              tile
+              size="300"
+              color="grey"
+              :src="n['Image Link']"
+              v-if="n['Image Link']"
+            >
+              <v-img :src="n['Image Link']"></v-img>
             </v-list-item-avatar>
             <v-list-item-content>
-              <div class="overline mb-4">Year</div>
+              <div class="overline mb-4"></div>
               <v-list-item-title class="headline mb-1">{{
-                n.title
+                n.Title
               }}</v-list-item-title>
-              <v-list-item-title class="title mb-1">{{
-                n.title
+              <div>{{ n['Text Box'] }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle1
               }}</v-list-item-title>
-              <div>{{ n.description }}</div>
+              <div>{{ n.SubText1 }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle2
+              }}</v-list-item-title>
+              <div>{{ n.SubText2 }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle3
+              }}</v-list-item-title>
+              <div>{{ n.SubText3}}</div>
             </v-list-item-content>
           </v-list-item>
         </v-card>
@@ -38,7 +56,7 @@
 
 
 <script>
-import park from "../../public/park.csv";
+import historical from "../../public/historical.csv";
 
 export default {
   lintOnSave: false,
@@ -46,72 +64,11 @@ export default {
   components: {},
   data: function () {
     return {
-      park,
-      data: [
-        {
-          year: "",
-          title: "",
-          description: "",
-          img: "",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          year: "",
-          title: "",
-          description: "",
-          img: "",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          year: "",
-          title: "",
-          description: "",
-          img: "",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          year: "",
-          title: "",
-          description: "",
-          img: "",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          title: "City Hall",
-          description: " ",
-          img: "",
-          subtitle_1: "",
-          description_1: " ",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-      ],
+      historical,
     };
   },
   mounted() {
-    console.log(park);
+    console.log(historical);
   },
 };
 </script>

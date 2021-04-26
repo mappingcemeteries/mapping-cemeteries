@@ -90,7 +90,7 @@
 
             <v-col justify-space-between cols="7">
               <v-btn-toggle
-          v-model="toggle_exclusive"
+         
           multiple
         >
               <v-btn

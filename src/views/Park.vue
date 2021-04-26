@@ -1,34 +1,51 @@
 <template>
   <div class="Park">
-    <v-timeline dense class="mx-lg-auto">
+    <v-card>
+      <v-card-title class="justify-center">City Hall Park: Death on the Commons </v-card-title>
+    </v-card>
+    <v-timeline dark dense class="mx-lg-auto">
       <v-timeline-item
-        v-for="(n, i) in data"
+        v-for="(n, i) in park"
         :key="i"
-        :color="data.color"
+        v-if="i!=0"
         small
       >
-      <template v-slot:icon>
+        <template v-slot:icon>
           <v-avatar>
             <img
               src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
             />
           </v-avatar>
         </template>
-        <v-card class="mx-auto" outlined>
+        <v-card class="mx-auto" outlined >
           <v-list-item>
-            <v-list-item-avatar tile size="300" color="grey" :src="n.img">
-              <v-img :src="n.img"></v-img>
+            <v-list-item-avatar
+              tile
+              size="300"
+              color="grey"
+              :src="n['Image Link']"
+              v-if="n['Image Link']"
+            >
+              <v-img :src="n['Image Link']"></v-img>
             </v-list-item-avatar>
             <v-list-item-content>
-              <div class="overline mb-4">Year</div>
+              <div class="overline mb-4"></div>
               <v-list-item-title class="headline mb-1">{{
-                n.title
+                n.Title
               }}</v-list-item-title>
-              <v-list-item-title class="title mb-1">{{
-                n.title
+              <div>{{ n['Text Box'] }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle1
               }}</v-list-item-title>
-              <div>{{ n.description }}</div>
-            
+              <div>{{ n.SubText1 }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle2
+              }}</v-list-item-title>
+              <div>{{ n.SubText2 }}</div>
+               <v-list-item-title class="headline mb-5">{{
+                n.SubTitle3
+              }}</v-list-item-title>
+              <div>{{ n.SubText3}}</div>
             </v-list-item-content>
           </v-list-item>
         </v-card>
@@ -48,65 +65,6 @@ export default {
   data: function () {
     return {
       park,
-      data: [
-        {
-          year: "",
-          title: "Death on the Commons",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          img: "https://images.nypl.org/index.php?id=EM13281&t=w",
-          subtitle_1: "",
-          description_1: "",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          title: "The First and Second Alsmhouses",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          img: "https://images.nypl.org/index.php?id=EM13281&t=w",
-          subtitle_1: "",
-          description_1: " ",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          title: "The Barracks",
-          description: " ",
-          img: "",
-          subtitle_1: "",
-          description_1: " ",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          title: "The New Gaol and Bridewell Prison",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          img: "https://images.nypl.org/index.php?id=1650673&t=w",
-          subtitle_1: "",
-          description_1: " ",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-        {
-          title: "City Hall",
-          description: " ",
-          img: "",
-          subtitle_1: "",
-          description_1: " ",
-          subtitle_2: "",
-          description_2: " ",
-          subtitle_3: "",
-          description_3: " ",
-        },
-      ],
     };
   },
   mounted() {
