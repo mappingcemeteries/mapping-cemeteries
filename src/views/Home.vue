@@ -1,8 +1,6 @@
 <template>
     <div id="map" class="home">
-      <div class="text-box">
-      <p>This website is under construction. Head over <a href= https://mappingcemeteries.commons.gc.cuny.edu/ target="_blank">here</a> to learn more.</p>
-    </div>
+     
     </div>
 
 </template>
@@ -54,6 +52,8 @@ export default {
 
         var coordinates = e.features[0].geometry.coordinates.slice();
         var title = e.features[0].properties.Caption;
+        var gravatar = e.features[0].properties.Gravatar;
+        console.log("lol "+e.features[0].properties.Gravatar)
 
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
@@ -61,7 +61,7 @@ export default {
 
         popup
           .setLngLat(coordinates)
-          .setHTML("<h3>" + title + "</h3><p>")
+          .setHTML("<h3>" + title + "</h3><img style=' border:2px solid black; width:100px; margin:auto; height:100px;  border-radius: 50%; ' src="+gravatar+"></img>")
           .addTo(map);
       });
 
@@ -77,6 +77,7 @@ export default {
 .home {
   width: 100%;
   height: 100%;
+  overflow-y: hidden
 }
 p {
   font-family: "Montserrat";

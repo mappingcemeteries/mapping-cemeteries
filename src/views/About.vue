@@ -7,51 +7,48 @@
         <v-tab> Contact Us </v-tab>
         <v-tab-item>
           <h2></h2>
-          <v-card tile dark >
-            <v-card-text class="text-center ">Our introduction to the project </v-card-text>
+          <v-card tile dark>
+            <v-card-text class="text-center"
+              >Our introduction to the project
+            </v-card-text>
           </v-card>
           <v-row class="intro">
             <v-col cols="12" md="4">
               <v-img
-                height="350px"
                 class="ml-10 mr-10"
                 src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169326127_121021733399839_7468243779477365123_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=7rg1PK5pHZoAX92AKPi&_nc_ht=scontent-lga3-1.xx&oh=44711dff39685ba23c96864e1ef6afd7&oe=6097FA6B"
               ></v-img>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
-                height="350px"
                 class="ml-10 mr-10"
                 src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/168751454_121021760066503_3231555397508698228_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=aCgK97xyC_gAX8tmzKd&_nc_ht=scontent-lga3-1.xx&oh=02d9ce97e97a15040251dfa9510e9d47&oe=6097D2B4"
               ></v-img>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
-                height="350px"
                 class="ml-10 mr-10"
                 src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/168855656_121021820066497_3410991152136923722_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=qkEeEyHdhDgAX9yZTdJ&_nc_ht=scontent-lga3-1.xx&oh=ab552fec36d09083dacbab7da907f3b7&oe=60974965"
               ></v-img>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
-                height="350px"
                 class="ml-10 mr-10"
                 src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169134219_121021796733166_3461938036758036341_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=QQuJLx3zEu4AX8J8z3Z&_nc_ht=scontent-lga3-1.xx&oh=cb4aac77515deacec82949b4e0685187&oe=609918CB"
               ></v-img>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
-                height="350px"
                 class="ml-10 mr-10"
                 src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169558885_121021776733168_5936852692700829422_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=XljTMPDcklsAX8DZIkN&_nc_ht=scontent-lga3-1.xx&oh=60aaa31a2acefb9cfabb3b74f0441dab&oe=609856A3"
               ></v-img>
             </v-col>
           </v-row>
         </v-tab-item>
-        <v-tab-item>  
+        <v-tab-item>
           <v-row class="intro">
             <v-col>
-              <v-card class="ml-1 mr-1 card" height="100vh" color="#D3D3D3">
+              <v-card class="ml-1 mr-1 card" color="#D3D3D3">
                 <v-card-title>
                   <span class="title font-weight-bold">Brianna Caszatt</span>
                   <v-card-actions>
@@ -91,7 +88,7 @@
               </v-card>
             </v-col>
             <v-col>
-              <v-card class="ml-1 mr-1" height="100vh" color="#D3D3D3">
+              <v-card class="ml-1 mr-1" color="#D3D3D3">
                 <v-card-title>
                   <span class="title font-weight-bold">Lisa Kofod</span>
                   <v-card-actions>
@@ -132,7 +129,7 @@
               </v-card>
             </v-col>
             <v-col>
-              <v-card class="ml-1 mr-1" height="100vh" color="#D3D3D3">
+              <v-card class="ml-1 mr-1" color="#D3D3D3">
                 <v-card-title>
                   <span class="title font-weight-bold">Asma N. </span>
                   <v-spacer></v-spacer>
@@ -151,38 +148,22 @@
                 </v-card-title>
 
                 <v-card-text class="font-weight-light">
-                  Asma (ahs-ma) N. is a Brooklyn native, Digital Humanist, Black
-                  feminist, and a graduate student at The Graduate Center, CUNY.
-                  She uses audio/technology to discourse her broader
-                  philosophical research interests in gender, social ontology,
-                  and digital humanities to develop original content in public
-                  scholarship. Asma cares about creatively transposing what’s
-                  meta about experience into accessible language and technology
-                  alike. Her other central topics include beauty politics,
-                  digital space and identity, and sound studies — all in
-                  relationship to Black women and individuals who are the
-                  priority in her work. Asma has a strong background in research
-                  and advocacy, having maintained a handful of fellowships
-                  across reproductive health, leadership, and diplomacy during
-                  and post undergrad at the University of Maryland, College
-                  Park. She’s also held appointments as a coordinator of
-                  education and training for diversity initiatives, and
-                  educational data management in the sites of D.C./Maryland and
-                  New York City. Asma is 1/5th of the team, Mapping Cemeteries,
-                  which is a digital humanist timeline project that explores the
-                  relationship between identity and death across four distinct
-                  cemeteries in New York City. She contributes her research
-                  skills in language, methodology, and analysis, as well as
-                  project design, strategy, and audiovisual modulation. Most of
-                  the above says more about her professional abilities and less
-                  about who is Asma. Somewhere at the core are the matters of
-                  the head and the heart that speak to love, wellness, and
-                  Halloween (her favorite time of year).
+                  Asma (aahs-ma) N. is a Brooklyn native, Digital Humanist,
+                  Black feminist, and a graduate student at The Graduate Center,
+                  CUNY. She serves as a Lead in academic research and audio
+                  production for Mapping Cemeteries (MC). MC is a Digital
+                  Humanist Timeline project that visualizes the cartographic
+                  relationship between identity and death across distinct
+                  Deathscapes of NYC. She also supports MC’s Outreach and is
+                  currently producing the limited series audio project, Mapping
+                  Cemeteries: After Life, an audio project about the lines that
+                  brought the Team and their work together (exclusive to the MC
+                  SoundCloud page).
                 </v-card-text>
               </v-card>
             </v-col>
             <v-col>
-              <v-card class="ml-1 mr-1" height="100vh" color="#D3D3D3">
+              <v-card class="ml-1 mr-1" color="#D3D3D3">
                 <v-card-title>
                   <span class="title font-weight-bold">Nadia El Mouldi</span>
                   <v-card-actions>
@@ -217,7 +198,7 @@
               </v-card>
             </v-col>
             <v-col>
-              <v-card class="ml-1 mr-1" height="100vh" color="#D3D3D3">
+              <v-card class="ml-1 mr-1" color="#D3D3D3">
                 <v-card-title>
                   <span class="title font-weight-bold">Lane Vineyard</span>
                   <v-card-actions>
@@ -288,11 +269,7 @@
     >
   </div>
 </template>
-        </v-tab-item>
-      </v-tabs>
-    </v-card>
-  </div>
-</template>
+
 
 
 <script>

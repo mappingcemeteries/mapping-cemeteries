@@ -1,7 +1,7 @@
 <template>
   <div class="Hidden">
     <v-card>
-      <v-card-title class="justify-center">City Hall Park: Death on the Commons </v-card-title>
+      <v-card-title class="justify-center title">City Hall Park: Death on the Commons </v-card-title>
     </v-card>
     <v-timeline dark dense class="mx-lg-auto">
       <v-timeline-item
@@ -12,7 +12,7 @@
       >
         <template v-slot:icon>
           <v-avatar>
-            <img
+            <img style=' border:2px solid black'
               src="https://images.unsplash.com/photo-1606170300294-84f3213babe3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80"
             />
           </v-avatar>
@@ -25,6 +25,7 @@
               color="grey"
               :src="n['Image Link']"
               v-if="n['Image Link']"
+              class="mb-auto"
             >
               <v-img :src="n['Image Link']"></v-img>
             </v-list-item-avatar>
@@ -72,3 +73,13 @@ export default {
   },
 };
 </script>
+
+<style>
+.theme--dark.v-timeline:before {
+    background: black;
+}
+</style>
+
+
+
+

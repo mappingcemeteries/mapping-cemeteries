@@ -1,7 +1,7 @@
 <template>
   <div class="WarMemorial">
     <v-card>
-      <v-card-title class="justify-center">The General William Jenkins Worth Monument</v-card-title>
+      <v-card-title class="justify-center title">The General William Jenkins Worth Monument</v-card-title>
     </v-card>
     <v-timeline dark dense class="mx-lg-auto">
       <v-timeline-item
@@ -12,7 +12,7 @@
       >
         <template v-slot:icon>
           <v-avatar>
-            <img
+            <img style='border:2px solid black'
               src="https://upload.wikimedia.org/wikipedia/commons/7/7a/War_Memorial_Swords_Shield_Close-Up.png"
             />
           </v-avatar>
@@ -25,6 +25,7 @@
               color="grey"
               :src="n['Image Link']"
               v-if="n['Image Link']"
+              class="mb-auto"
             >
               <v-img :src="n['Image Link']"></v-img>
             </v-list-item-avatar>
@@ -72,3 +73,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.theme--dark.v-timeline:before {
+    background: black;
+}
+</style>

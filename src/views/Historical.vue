@@ -1,7 +1,7 @@
 <template>
   <div class="Historical">
     <v-card>
-      <v-card-title class="justify-center">New York Marble Cemetery</v-card-title>
+      <v-card-title class="justify-center title">New York Marble Cemetery</v-card-title>
     </v-card>
     <v-timeline dark dense class="mx-lg-auto">
       <v-timeline-item
@@ -12,8 +12,8 @@
       >
         <template v-slot:icon>
           <v-avatar>
-            <img
-              src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
+            <img style=' border:2px solid black'
+              src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
             />
           </v-avatar>
         </template>
@@ -25,8 +25,9 @@
               color="grey"
               :src="n['Image Link']"
               v-if="n['Image Link']"
+              class="mb-auto"
             >
-              <v-img :src="n['Image Link']"></v-img>
+              <v-img :src="n['Image Link']" ></v-img>
             </v-list-item-avatar>
             <v-list-item-content>
               <div class="overline mb-4"></div>
@@ -72,3 +73,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.theme--dark.v-timeline:before {
+    background: black;
+}
+</style>

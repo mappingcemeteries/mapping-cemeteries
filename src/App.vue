@@ -14,7 +14,7 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <v-footer dark fixed height="auto" width="30%">
+    <v-footer dark fixed height="auto" width="20%">
       <v-card  tile class="">
         <v-card-text>
           <v-btn
@@ -47,6 +47,7 @@ export default {
       { i: "fab fa-instagram", link: "https://www.instagram.com/mappingcemeteries/" },
       { i: "fab fa-tiktok", link: "https://www.tiktok.com/@mappingcemeteries?lang=en" },
       { i: "fab fa-wordpress", link: "https://mappingcemeteries.commons.gc.cuny.edu/" },
+       { i: "fab fa-soundcloud", link: "https://soundcloud.com/user-637712301" },
     ],
   }),
 };

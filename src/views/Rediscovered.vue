@@ -1,7 +1,7 @@
 <template>
   <div class="Rediscovered">
     <v-card>
-      <v-card-title class="justify-center">African Burial Ground: For All Those Who Were Not Forgotten </v-card-title>
+      <v-card-title class="justify-center title">African Burial Ground: For All Those Who Were Not Forgotten </v-card-title>
     </v-card>
     <v-timeline dense dark class="mx-lg-auto">
       <v-timeline-item
@@ -12,7 +12,7 @@
       >
         <template v-slot:icon>
           <v-avatar>
-            <img
+            <img style='border:2px solid black'
               src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
             />
           </v-avatar>
@@ -25,6 +25,7 @@
               color="grey"
               :src="n['Image Link']"
               v-if="n['Image Link']"
+              class="mb-auto"
             >
               <v-img :src="n['Image Link']"></v-img>
             </v-list-item-avatar>
@@ -72,3 +73,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.theme--dark.v-timeline:before {
+    background: black;
+}
+</style>
