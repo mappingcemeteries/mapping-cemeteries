@@ -16,16 +16,21 @@
         </template>
         <v-card class="mx-auto" outlined>
           <v-list-item>
-            <v-list-item-avatar
-              tile
-              size="300"
-              color="grey"
-              :src="n['Image Link']"
-              v-if="n['Image Link']"
-              class="mb-auto"
-            >
-              <v-img  :src="n['Image Link']"></v-img>
-            </v-list-item-avatar>
+         <v-tooltip bottom>
+              <template #activator="{ on }">
+                <v-list-item-avatar v-on="on"
+                  tile
+                  size="300"
+                  color="grey"
+                  :src="n['Image Link']"
+                  v-if="n['Image Link']"
+                  class="mb-auto"
+                >
+                  <v-img :src="n['Image Link']"></v-img>
+                </v-list-item-avatar>
+              </template>
+              <span>{{n.Caption}} <br /> {{n.Attribution}}</span>
+            </v-tooltip>
             <v-list-item-content>
               <div class="overline mb-4"></div>
               <v-list-item-title class="headline mb-1">{{
@@ -44,6 +49,8 @@
                 n.SubTitle3
               }}</v-list-item-title>
               <div>{{ n.SubText3 }}</div>
+               <v-list-item-title ></v-list-item-title>
+              <div style="font-size:10px">{{ n.Citation }}</div>
             </v-list-item-content>
           </v-list-item>
         </v-card>

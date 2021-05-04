@@ -9,7 +9,15 @@
           <h2></h2>
           <v-card tile dark>
             <v-card-text class="text-center"
-              >Our introduction to the project
+              >Mapping Cemeteries is a digital humanist timeline and mapping
+              project exploring the deathscape across New York City through a
+              necropolitical, historical, and infrastructural lens, and asking
+              the fundamental question of who gets to be remembered after death.
+              Check out our accompanying website
+              <a href="https://mappingcemeteries.commons.gc.cuny.edu/about/">
+                our accompanying website
+              </a>
+              to learn more about the process.
             </v-card-text>
           </v-card>
           <v-row class="intro">
@@ -56,6 +64,7 @@
                       <v-list-item-avatar color="grey darken-3">
                         <v-img
                           class="elevation-6"
+                          style="border: 2px solid black"
                           alt=""
                           src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Justice_Statue_Gravatar.png"
                         ></v-img>
@@ -97,6 +106,7 @@
                         <v-spacer></v-spacer>
                         <v-img
                           class="elevation-6"
+                          style="border: 2px solid black"
                           alt=""
                           src="https://upload.wikimedia.org/wikipedia/commons/7/7a/War_Memorial_Swords_Shield_Close-Up.png"
                         ></v-img>
@@ -138,6 +148,7 @@
                       <v-list-item-avatar color="grey darken-3">
                         <v-spacer></v-spacer>
                         <v-img
+                          style="border: 2px solid black"
                           class="elevation-6"
                           alt=""
                           src="https://images.unsplash.com/photo-1606170300294-84f3213babe3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80"
@@ -172,6 +183,7 @@
                         <v-img
                           class="elevation-6"
                           alt=""
+                          style="border: 2px solid black"
                           src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
                         ></v-img>
                       </v-list-item-avatar>
@@ -205,6 +217,7 @@
                     <v-list-item class="grow">
                       <v-list-item-avatar color="grey darken-3">
                         <v-img
+                          style="border: 2px solid black"
                           class="elevation-6"
                           alt=""
                           src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
@@ -236,7 +249,16 @@
           </v-row>
         </v-tab-item>
         <v-tab-item class="form" height="1000px">
-          <form height="500px" class="mr-15 ml-15">
+          <v-card>
+            <v-card-title>
+          To contact us, head to 
+              <a href="https://mappingcemeteries.commons.gc.cuny.edu/contact-us/">
+                our accompanying website
+              </a>
+            </v-card-title>
+          </v-card>
+            
+          <!-- <form height="500px" class="mr-15 ml-15">
             <v-text-field
               v-model="name"
               :error-messages="nameErrors"
@@ -263,7 +285,7 @@
             ></v-text-field>
             <v-btn class="mr-4" @click="submit"> submit </v-btn>
             <v-btn @click="clear"> clear </v-btn>
-          </form>
+          </form> -->
         </v-tab-item></v-tabs
       ></v-card
     >
