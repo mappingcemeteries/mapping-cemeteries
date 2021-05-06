@@ -48,7 +48,7 @@
           <span>{{ n.Date }}</span>
         </template>
         <v-card class="ml-14 mr-14" :id="n['Tag One'] + n['Date']">
-          <v-img :src="n['Image Link']" height="150px"></v-img>
+          <v-img :src="n['Image Link']" height="250px"></v-img>
           <!-- <v-card-title class="headline"> {{ n.id }} </v-card-title> -->
          <v-list-item>
             <v-list-item-content>

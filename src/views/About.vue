@@ -253,7 +253,7 @@
             <v-card-title>
           To contact us, head to 
               <a href="https://mappingcemeteries.commons.gc.cuny.edu/contact-us/">
-                Making Mapping Cemeteries
+                 Making Mapping Cemeteries
               </a>
             </v-card-title>
           </v-card>
