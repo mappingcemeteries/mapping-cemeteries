@@ -50,9 +50,29 @@
         <v-card class="ml-14 mr-14" :id="n['Tag One'] + n['Date']">
           <v-img :src="n['Image Link']" height="150px"></v-img>
           <!-- <v-card-title class="headline"> {{ n.id }} </v-card-title> -->
-          <v-card-text class="text--light"
-            ><div>{{ n.Caption }}</div>
-          </v-card-text>
+         <v-list-item>
+            <v-list-item-content>
+              <div class="overline mb-4"></div>
+              <v-list-item-title class="headline mb-1">{{
+                n.Title
+              }}</v-list-item-title>
+              <div>{{ n["Text Box"] }}</div>
+              <v-list-item-title class="headline mb-5">{{
+                n.SubTitle1
+              }}</v-list-item-title>
+              <div>{{ n.SubText1 }}</div>
+              <v-list-item-title class="headline mb-5">{{
+                n.SubTitle2
+              }}</v-list-item-title>
+              <div>{{ n.SubText2 }}</div>
+              <v-list-item-title class="headline mb-5">{{
+                n.SubTitle3
+              }}</v-list-item-title>
+              <div>{{ n.SubText3 }}</div>
+              <v-list-item-title></v-list-item-title>
+              <div style="font-size: 10px">{{ n.Citation }}</div>
+            </v-list-item-content>
+          </v-list-item>
           <v-card-actions>
             <v-btn
               v-if="n.Custodian == 'Lisa'"
@@ -181,7 +201,7 @@
 
 <script>
 // @ is an alias to /src
-import v_timeline from "../../public/Vertical_Timeline.csv";
+import v_timeline from "../../public/Vertical.csv";
 import v_timeline_h from "../../public/Horizontal_Timeline.csv";
 import * as d3 from "../../../lib/d3";
 
@@ -395,6 +415,9 @@ export default {
 
 
 <style>
+.theme--dark.v-timeline:before {
+  background: black;
+}
 .v-app-bar {
   position: fixed;
   z-index: 90;
@@ -416,7 +439,4 @@ export default {
   fill: black;
 }
 
-.theme--dark.v-timeline:before {
-  background: black;
-}
 </style>
