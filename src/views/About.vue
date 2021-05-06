@@ -13,9 +13,9 @@
               project exploring the deathscape across New York City through a
               necropolitical, historical, and infrastructural lens, and asking
               the fundamental question of who gets to be remembered after death.
-              Check out our accompanying website
+              Check out
               <a href="https://mappingcemeteries.commons.gc.cuny.edu/about/">
-                our accompanying website
+               Making Mapping Cemeteries
               </a>
               to learn more about the process.
             </v-card-text>
@@ -253,7 +253,7 @@
             <v-card-title>
           To contact us, head to 
               <a href="https://mappingcemeteries.commons.gc.cuny.edu/contact-us/">
-                our accompanying website
+                Making Mapping Cemeteries
               </a>
             </v-card-title>
           </v-card>

@@ -416,7 +416,7 @@ export default {
   fill: black;
 }
 
-.v-timeline::before {
-  background: red;
+.theme--dark.v-timeline:before {
+  background: black;
 }
 </style>
