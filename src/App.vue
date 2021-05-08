@@ -2,11 +2,9 @@
   <v-app dark>
     <v-app-bar app color="black" dark>
       <v-img
-      
         src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/05/mapping-cemeteries-logo-for-header-zoomed.jpeg"
         height="50"
         max-width="200"
- 
       ></v-img>
       <!-- <v-toolbar-title x-large color="white" class="headline"
         >Mapping Cemeteries</v-toolbar-title
@@ -21,23 +19,16 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <v-footer dark fixed height="auto" width="30%">
-      <v-card tile class="">
-        <v-card-text>
-          <v-btn
-            v-for="(icon, i) in icons"
-            :key="i"
-            :href="icon.link"
-            class="mx-3 white--text"
-            icon
-            target="_blank"
-          >
-            <v-icon size="24px">{{ icon.i }}</v-icon>
-          </v-btn>
-        </v-card-text>
-
-        <v-divider></v-divider>
-      </v-card>
+    <v-footer dark fixed height="auto" color="" width="17%">
+      <v-btn
+        v-for="(icon, i) in icons"
+        :key="i"
+        :href="icon.link"
+        icon
+        target="_blank"
+      >
+        <v-icon size="15px">{{ icon.i }}</v-icon>
+      </v-btn>
     </v-footer>
   </v-app>
 </template>
@@ -50,6 +41,11 @@ export default {
 
   data: () => ({
     icons: [
+       {
+        i: "fab fa-wordpress",
+        link: "https://mappingcemeteries.commons.gc.cuny.edu/",
+      },
+      { i: "fab fa-soundcloud", link: "https://soundcloud.com/user-637712301" },
       {
         i: "fab fa-facebook",
         link: "https://www.facebook.com/mappingcemeteriesnyc",
@@ -62,11 +58,7 @@ export default {
         i: "fab fa-tiktok",
         link: "https://www.tiktok.com/@mappingcemeteries?lang=en",
       },
-      {
-        i: "fab fa-wordpress",
-        link: "https://mappingcemeteries.commons.gc.cuny.edu/",
-      },
-      { i: "fab fa-soundcloud", link: "https://soundcloud.com/user-637712301" },
+     
     ],
   }),
 };

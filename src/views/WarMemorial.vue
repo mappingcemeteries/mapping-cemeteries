@@ -30,7 +30,7 @@
                   <v-img :src="n['Image Link']"></v-img>
                 </v-list-item-avatar>
               </template>
-              <span>{{n.Caption}} 'n/' {{n.Attribution}}</span>
+              <span>{{n.Caption}} <br /> {{n.Attribution}}</span>
             </v-tooltip>
             <v-list-item-content>
               <div class="overline mb-4"></div>
