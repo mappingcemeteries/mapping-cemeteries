@@ -80,6 +80,6 @@ export default {
 
 <style>
 .theme--dark.v-timeline:before {
-    background: black;
+  background: black!important
 }
 </style>

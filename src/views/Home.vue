@@ -61,7 +61,7 @@ export default {
 
         popup
           .setLngLat(coordinates)
-          .setHTML("<h3>" + title + "</h3><img style=' border:2px solid black; width:100px; margin:auto; height:100px;  border-radius: 50%; ' src="+gravatar+"></img>")
+          .setHTML("<h3>" + title + "</h3><img style=' border:2px solid black; width:100px;  display: block; margin-left: auto; margin-right: auto; height:100px;  border-radius: 50%; ' src="+gravatar+"></img>")
           .addTo(map);
       });
 

@@ -24,31 +24,31 @@
             <v-col cols="12" md="4">
               <v-img
                 class="ml-10 mr-10"
-                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169326127_121021733399839_7468243779477365123_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=7rg1PK5pHZoAX92AKPi&_nc_ht=scontent-lga3-1.xx&oh=44711dff39685ba23c96864e1ef6afd7&oe=6097FA6B"
+                src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Bri-Quote-4.jpeg"
               ></v-img>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
                 class="ml-10 mr-10"
-                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/168751454_121021760066503_3231555397508698228_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=aCgK97xyC_gAX8tmzKd&_nc_ht=scontent-lga3-1.xx&oh=02d9ce97e97a15040251dfa9510e9d47&oe=6097D2B4"
+                src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Lisa-Quote-2.jpeg"
               ></v-img>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
                 class="ml-10 mr-10"
-                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/168855656_121021820066497_3410991152136923722_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=qkEeEyHdhDgAX9yZTdJ&_nc_ht=scontent-lga3-1.xx&oh=ab552fec36d09083dacbab7da907f3b7&oe=60974965"
+                src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Asma-Quote-2.jpeg"
               ></v-img>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
                 class="ml-10 mr-10"
-                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169134219_121021796733166_3461938036758036341_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=QQuJLx3zEu4AX8J8z3Z&_nc_ht=scontent-lga3-1.xx&oh=cb4aac77515deacec82949b4e0685187&oe=609918CB"
+                src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Nadia-Quote-1.jpeg"
               ></v-img>
             </v-col>
             <v-col cols="12" md="4">
               <v-img
                 class="ml-10 mr-10"
-                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/169558885_121021776733168_5936852692700829422_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=XljTMPDcklsAX8DZIkN&_nc_ht=scontent-lga3-1.xx&oh=60aaa31a2acefb9cfabb3b74f0441dab&oe=609856A3"
+                src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Lane-Quote-2.jpeg"
               ></v-img>
             </v-col>
           </v-row>

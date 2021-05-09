@@ -23,7 +23,7 @@
               src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
             />
             <img
-              v-if="n.Custodian == 'Nadia'"
+              v-if="n['Tag One'] == 'Nadia'"
               @click="goToHistorical"
               src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
             />
@@ -630,7 +630,7 @@ export default {
 
 <style>
 .theme--dark.v-timeline:before {
-  background: black;
+  background: black!important
 }
 .v-app-bar {
   position: fixed;
