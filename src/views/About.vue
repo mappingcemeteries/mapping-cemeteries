@@ -257,35 +257,6 @@
               </a>
             </v-card-title>
           </v-card>
-            
-          <!-- <form height="500px" class="mr-15 ml-15">
-            <v-text-field
-              v-model="name"
-              :error-messages="nameErrors"
-              label="Name"
-              required
-              @input="$v.name.$touch()"
-              @blur="$v.name.$touch()"
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              :error-messages="emailErrors"
-              label="E-mail"
-              required
-              @input="$v.email.$touch()"
-              @blur="$v.email.$touch()"
-            ></v-text-field>
-            <v-text-field
-              dense
-              v-model="message"
-              label="message"
-              required
-              @input="$v.message.$touch()"
-              @blur="$v.message.$touch()"
-            ></v-text-field>
-            <v-btn class="mr-4" @click="submit"> submit </v-btn>
-            <v-btn @click="clear"> clear </v-btn>
-          </form> -->
         </v-tab-item></v-tabs
       ></v-card
     >

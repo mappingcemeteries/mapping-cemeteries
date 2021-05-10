@@ -23,11 +23,11 @@
                   tile
                   size="300"
                   color="grey"
-                  :src="n['Source Link']"
-                  v-if="n['Source Link']"
+                  :src="n['Image Link']"
+                  v-if="n['Image Link']"
                   class="mb-auto"
                 >
-                  <v-img :src="n['Source Link']"></v-img>
+                  <v-img :src="n['Image Link']"></v-img>
                 </v-list-item-avatar>
               </template>
               <span>{{n.Caption}} <br /> {{n.Attribution}}</span>

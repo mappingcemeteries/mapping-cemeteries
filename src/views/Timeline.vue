@@ -23,7 +23,7 @@
               src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Coffin_%281%29.png"
             />
             <img
-              v-if="n['Tag One'] == 'Nadia'"
+              v-if="n.Custodian == 'Nadia'"
               @click="goToHistorical"
               src="http://3.bp.blogspot.com/-_Sqq5JpNPAc/Ulyvd9u7zzI/AAAAAAAAIMM/NXY2CuWWuVQ/s1600/peck.jpg"
             />
@@ -76,33 +76,70 @@
           <v-card-actions>
             <v-btn
               v-if="n.Custodian == 'Lisa'"
-              :x-small="$vuetify.breakpoint.smAndDown"
+               v-show="$vuetify.breakpoint.mdAndUp"
               to="/WarMemorial"
               >Read More</v-btn
             >
+
+             <v-btn
+              v-if="n.Custodian == 'Lisa'"
+               v-show="$vuetify.breakpoint.smAndDown"
+              to="/WarMemorial"
+              >Read</v-btn
+            >
+
             <v-btn
               v-if="n.Custodian == 'Bri'"
-              :x-small="$vuetify.breakpoint.smAndDown"
+              v-show="$vuetify.breakpoint.mdAndUp"
               to="/Park"
               >Read More</v-btn
             >
+
+               <v-btn
+              v-if="n.Custodian == 'Bri'"
+              v-show="$vuetify.breakpoint.smAndDown"
+              to="/Park"
+              >Read</v-btn
+            >
             <v-btn
               v-if="n.Custodian == 'lane'"
-              :x-small="$vuetify.breakpoint.smAndDown"
+               v-show="$vuetify.breakpoint.mdAndUp"
               to="/Rediscovered"
               >Read More</v-btn
             >
+
+               <v-btn
+              v-if="n.Custodian == 'lane'"
+               v-show="$vuetify.breakpoint.smAndDown"
+              to="/Rediscovered"
+              >Read</v-btn
+            >
             <v-btn
               v-if="n.Custodian == 'Nadia'"
-              :x-small="$vuetify.breakpoint.smAndDown"
+               v-show="$vuetify.breakpoint.mdAndUp"
               to="/Historical"
               >Read More</v-btn
             >
+
+               <v-btn
+              v-if="n.Custodian == 'Nadia'"
+               v-show="$vuetify.breakpoint.smAndDown"
+              to="/Historical"
+              >Read</v-btn
+            >
+
             <v-btn
               v-if="n.Custodian == 'Asma'"
-              :x-small="$vuetify.breakpoint.smAndDown"
+               v-show="$vuetify.breakpoint.mdAndUp"
               to="/Hidden"
               >Read More</v-btn
+            >
+
+             <v-btn
+              v-if="n.Custodian == 'Asma'"
+               v-show="$vuetify.breakpoint.smAndDown"
+              to="/Hidden"
+              >Read</v-btn
             >
             <v-spacer></v-spacer>
             <v-spacer></v-spacer>
@@ -112,8 +149,7 @@
               <v-btn
                 x-small
                 class="btn-txt"
-                color="#BBD"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#4F695E"
                 align-right
                 v-if="n['Tag One'] == 'Park'"
                 @click.prevent="filter('park')"
@@ -122,8 +158,7 @@
               <v-btn
                 x-small
                 class="btn-txt"
-                color="#789"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#351F1A"
                 align-right
                 v-if="n['Tag One'] == 'War'"
                 @click.prevent="filter('war')"
@@ -133,8 +168,7 @@
                <v-btn
                 x-small
                 class="btn-txt"
-                color="#D81"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#41444E"
                 align-right
                 v-if="n['Tag One'] == 'Powerlines'"
                 @click.prevent="filter('powerlines')"
@@ -144,8 +178,8 @@
                <v-btn
                 x-small
                 class="btn-txt"
-                color="#4A1"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#71474E"
+                
                 align-right
                 v-if="n['Tag One'] == 'Embodied'"
                 @click.prevent="filter('embodied')"
@@ -154,8 +188,8 @@
               <v-btn
                 x-small
                 class="btn-txt"
-                color="#C51"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#4F695E"
+                
                 align-right
                 v-if="n['Tag One'] == 'African'"
                 @click.prevent="filter('african')"
@@ -164,8 +198,8 @@
               <v-btn
                 x-small
                 class="btn-txt"
-                color="#C55"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#562119"
+                
                 align-right
                 v-if="n['Tag One'] == 'Historical'"
                 @click.prevent="filter('historical')"
@@ -175,8 +209,8 @@
               <v-btn
                 x-small
                 class="btn-txt"
-                color="#97B"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#772318"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Punishment'"
                 @click.prevent="filter('punishment')"
@@ -187,7 +221,7 @@
                 x-small
                 class="btn-txt"
                 color="#C51"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Military'"
                 @click.prevent="filter('military')"
@@ -197,7 +231,7 @@
                 x-small
                 class="btn-txt"
                 color="#263"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Expansion'"
                 @click.prevent="filter('expansion')"
@@ -206,8 +240,8 @@
                 <v-btn
                 x-small
                 class="btn-txt"
-                color="#4A1"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#71474E"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Embodied'"
                 @click.prevent="filter('embodied')"
@@ -217,8 +251,8 @@
                   <v-btn
                 x-small
                 class="btn-txt"
-                color="#303"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#41444E"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Power'"
                 @click.prevent="filter('power')"
@@ -228,8 +262,8 @@
                  <v-btn
                 x-small
                 class="btn-txt"
-                color="#015"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#AC7B84"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Media'"
                 @click.prevent="filter('media')"
@@ -240,7 +274,7 @@
                 x-small
                 class="btn-txt"
                 color="#32E"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Biography'"
                 @click.prevent="filter('biography')"
@@ -251,7 +285,7 @@
                 x-small
                 class="btn-txt"
                 color="#827"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Quotes'"
                 @click.prevent="filter('quotes')"
@@ -262,8 +296,8 @@
               <v-btn
                 x-small
                 class="btn-txt"
-                color="#1B5"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#D58936"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Infrastructure'"
                 @click.prevent="filter('infrastrcuture')"
@@ -276,7 +310,7 @@
                 x-small
                 class="btn-txt"
                 color="#795"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Reinterment'"
                 @click.prevent="filter('reinterment')"
@@ -287,7 +321,7 @@
                 x-small
                 class="btn-txt"
                 color="#795"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Three'] == 'Reinterment'"
                 @click.prevent="filter('reinterment')"
@@ -297,8 +331,8 @@
                 <v-btn
                 x-small
                 class="btn-txt"
-                color="#3F5"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#A89B61"
+                
                 align-right
                 v-if="n['Tag Two'] == 'Hidden'"
                 @click.prevent="filter('hidden')"
@@ -308,8 +342,8 @@
                <v-btn
                 x-small
                 class="btn-txt"
-                color="#3F5"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                color="#A89B61"
+                
                 align-right
                 v-if="n['Tag Three'] == 'Hidden'"
                 @click.prevent="filter('hidden')"
@@ -319,7 +353,7 @@
                 x-small
                 class="btn-txt"
                 color="#789"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Three'] == 'Hangings'"
                 @click.prevent="filter('hangings')"
@@ -329,7 +363,7 @@
                 x-small
                 class="btn-txt"
                 color="#C51"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Three'] == 'Disease'"
                 @click.prevent="filter('disease')"
@@ -339,7 +373,7 @@
                 x-small
                 class="btn-txt"
                 color="#263"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Three'] == 'Expansion'"
                 @click.prevent="filter('expansion')"
@@ -350,7 +384,7 @@
                 x-small
                 class="btn-txt"
                 color="#C55"
-                v-show="$vuetify.breakpoint.mdAndUp"
+                
                 align-right
                 v-if="n['Tag Three'] == 'Beautification'"
                 @click.prevent="filter('beautification')"
@@ -362,6 +396,7 @@
               <v-icon
                 color="#A9A9A9"
                 class="pin-icon"
+                :x-small="$vuetify.breakpoint.smAndDown"
                 :id="n['Tag One'] + n['Date']"
                 >mdi-pin</v-icon
               >

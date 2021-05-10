@@ -70,6 +70,7 @@ export default {
 }
 v-app {
   background-color: black;
+  overflow-y: auto;
 }
 v-footer {
 }
