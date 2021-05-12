@@ -15,9 +15,13 @@
               the fundamental question of who gets to be remembered after death.
               Check out
               <a href="https://mappingcemeteries.commons.gc.cuny.edu/about/">
-               Making Mapping Cemeteries
+                Making Mapping Cemeteries
               </a>
-              to learn more about the process.
+              to learn more about how we conceived of and built this project and
+              view our
+              <a href="https://mappingcemeteries.commons.gc.cuny.edu/about/">
+                bibliography </a
+              >.
             </v-card-text>
           </v-card>
           <v-row class="intro">
@@ -76,23 +80,24 @@
                 <v-card-text class="font-weight-light">
                   Brianna hails from Michigan but has called Queens home for
                   almost 13 years. She is a copy chief and copy editor by day
-                  and a graduate student in the MA in Digital Humanities (DH)
-                  program at the CUNY Graduate Center by night. Joining the DH
-                  community has definitely been her best pandemic decision. And
-                  buying more sweatpants. DH and sweatpants: the two best
-                  pandemic decisions by far. Mapping Cemeteries brings together
-                  her interests (some old and some new-found) in social justice,
-                  memory studies, infrastructure, and mapping. The original idea
-                  for the project was hers, but what the project has become is
-                  so much more than she ever could have expected, and it is all
-                  thanks to the creative and collaborative energy of the entire
-                  team. As project manager, she has created a group space for
+                  and a graduate student in the Master of Arts in Digital
+                  Humanities program at the Graduate Center of the City
+                  University of New York (CUNY) by night. Mapping Cemeteries
+                  brings together her interests (some old and some new-found) in
+                  social justice, memory studies, infrastructure, and mapping.
+                  The original idea for the project was hers, but what the
+                  project has become is so much more than she ever could have
+                  expected, and it is all thanks to the creative and
+                  collaborative energy of the entire team. In her primary role
+                  as project manager, she has created a group space for
                   everyone’s internal communications and workflow needs, she
                   sets the meeting agendas and keeps notes during each meeting,
                   and she makes sure blockers are addressed and goals are met.
-                  She is also responsible for the researching and data
-                  collection of a cemetery that was redeveloped and turned into
-                  a public park: City Hall Park.
+                  She manages the team's private group page and public site here
+                  on the CUNY Academic Commons. For this first phase of the
+                  project, she is also responsible for researching and
+                  maintaining the data on a cemetery that was redeveloped and
+                  turned into a public park: City Hall Park.
                 </v-card-text>
               </v-card>
             </v-col>
@@ -116,25 +121,25 @@
                 </v-card-title>
 
                 <v-card-text class="font-weight-light">
-                  Lisa is a writer and producer, they are also a digital
+                  Lisa is a writer and producer; they are also a digital
                   humanities student working toward their Master of Arts in the
                   Digital Humanities at the Graduate Center of the City
-                  University of New York (CUNY). A life-long New Yorker, they
-                  were drawn to this project because of their love of New York
-                  City history and their fascination with how we choose to
-                  remember those who came before. How do we determine who
-                  “deserves” to be remembered? What do those remembrances look
-                  like? How have these remembrances changed over time? Their
-                  primary roles in this project were site design and testing.
-                  This included working with the developer on which platform to
-                  use and what frameworks to apply, creating best practices for
-                  the incorporation of digital assets, and testing the site as
-                  it was developed. Their secondary roles were in documentation
-                  and research. Documentation included tracking conversations
-                  during the development stage and encouraging the team away
-                  from scope creep. Research responsibilities included working
-                  on technical options and scholarly research on a set of war
-                  memorials within Manhattan.
+                  University of New York (CUNY). A lifelong New Yorker, they are
+                  drawn to this project because of their love of New York City
+                  history and their fascination with how we choose to remember
+                  those who came before. How do we determine who “deserves” to
+                  be remembered? What do those remembrances look like? How have
+                  these remembrances changed over time? Their primary roles in
+                  this project are site design and testing. This includes
+                  working with the developer on which platform to use and what
+                  frameworks to apply, creating best practices for the
+                  incorporation of digital assets, and testing the site as it
+                  was developed. Their secondary roles are in documentation and
+                  research. Documentation includes tracking conversations during
+                  the development stage and encouraging the team away from scope
+                  creep. Research responsibilities include working on technical
+                  options and scholarly research on a set of war memorials
+                  within Manhattan.
                 </v-card-text>
               </v-card>
             </v-col>
@@ -193,7 +198,8 @@
 
                 <v-card-text class="font-weight-light">
                   Nadia is a software engineer and a graduate student in the
-                  Master of Arts in Digital Humanities program at CUNY. She has
+                  Master of Arts in Digital Humanities program at the Graduate
+                  Center of the City University of New York (CUNY). She has
                   graduated with a BA in Computer Science and Statistics,
                   helping her to develop skills in software design and
                   development with a focus on ethical practices and critical
@@ -228,21 +234,20 @@
                 </v-card-title>
 
                 <v-card-text class="font-weight-light">
-                  lane vineyard is a first-year student at the CUNY Graduate
-                  Center currently pursuing a master’s in Digital Humanities.
-                  They currently hold a B.A. in Linguistics, with minors in
-                  Spanish and Mandarin, from Middle Tennessee State University.
-                  Though they have some educational background in the arts and
-                  humanities, they have only recently begun delving into the
-                  field of Digital Humanities. Their research interests include
-                  queer culture and history, digital mapping tools, design, and
-                  studying the intersection of language and identity with DH
-                  tools. lane’s primary role for the project is outreach, which
-                  entails the creation and maintenance of an online presence for
-                  the project. Additionally, they do primary research for one of
-                  the cemeteries showcased in the project, which is a cemetery
-                  that was repurposed, rediscovered, and now exists again as
-                  both a cemetery and national monument
+                  lane is a first-year student currently working towards their
+                  Master of Arts in the Digital Humanities at the Graduate
+                  Center of the City of New York (CUNY). They currently hold a
+                  B.A. in Linguistics from Middle Tennessee State University and
+                  have only recently made the move to the city after residing in
+                  Tennessee their entire life. Though they have some educational
+                  background in the arts and humanities, they have only recently
+                  begun delving into the field of Digital Humanities. Their
+                  research interests include queer culture and history, design,
+                  and sociolinguistics. lane’s primary role for the project is
+                  outreach, which entails the creation and maintenance of an
+                  online presence for the project. Additionally, they do primary
+                  research for the African Burial Ground National Monument that
+                  is showcased in this project.
                 </v-card-text>
               </v-card>
             </v-col>
@@ -250,12 +255,17 @@
         </v-tab-item>
         <v-tab-item class="form" height="1000px">
           <v-card>
-            <v-card-title>
-          To contact us, head to 
-              <a href="https://mappingcemeteries.commons.gc.cuny.edu/contact-us/">
-                 Making Mapping Cemeteries
-              </a>
-            </v-card-title>
+            <v-card-text>
+              Learn more about how we made this project on our companion site, 
+              <a href="https://mappingcemeteries.commons.gc.cuny.edu/">
+                Making Mapping Cemeteries </a
+              >, including how to
+              <a
+                href="https://mappingcemeteries.commons.gc.cuny.edu/contact-us/"
+              >
+                contact us </a
+              >.
+            </v-card-text>
           </v-card>
         </v-tab-item></v-tabs
       ></v-card

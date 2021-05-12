@@ -2,13 +2,14 @@
   <div class="timeline">
     <v-app-bar height="120" width="2000" window dark>
       <div id="res" style="width: 100%; z-index: 10000"></div>
+       <v-btn light  @click="unfilter" >Reset</v-btn>
     </v-app-bar>
     <br />
     <br />
     <br />
     <br />
     <br />
-
+   
     <v-timeline
       :dense="$vuetify.breakpoint.mdAndDown"
       class="pa-md-16 mx-lg-auto"
@@ -48,24 +49,26 @@
           <span>{{ n.Date }}</span>
         </template>
         <v-card class="ml-14 mr-14" :id="n['Tag One'] + n['Date']">
-          <v-img :src="n['Image Link']" height="250px" width="500px"></v-img>
+          <v-img :src="n['Image Link']" height="auto" width="auto"></v-img>
           <!-- <v-card-title class="headline"> {{ n.id }} </v-card-title> -->
           <v-list-item>
             <v-list-item-content>
-              <div class="overline mb-4" ></div>
-              <v-list-item-title class="headline mb-1 text-wrap" style="word-break: normal">{{
-                n.Title
-              }}</v-list-item-title>
+              <div class="overline mb-4"></div>
+              <v-list-item-title
+                class="headline mb-1 text-wrap"
+                style="word-break: normal"
+                >{{ n.Title }}</v-list-item-title
+              >
               <div>{{ n["Text Box"] }}</div>
-              <v-list-item-title class="headline mb-5 text-wrap">{{
+              <v-list-item-title class="headline mb-5 text-wrap" style="word-break: normal">{{
                 n.SubTitle1
               }}</v-list-item-title>
               <div>{{ n.SubText1 }}</div>
-              <v-list-item-title class="headline mb-5" text-wrap>{{
+              <v-list-item-title class="headline mb-5" style="word-break: normal" text-wrap>{{
                 n.SubTitle2
               }}</v-list-item-title>
               <div>{{ n.SubText2 }}</div>
-              <v-list-item-title class="headline mb-5 text-wrap">{{
+              <v-list-item-title class="headline mb-5 text-wrap" style="word-break: normal">{{
                 n.SubTitle3
               }}</v-list-item-title>
               <div>{{ n.SubText3 }}</div>
@@ -76,14 +79,14 @@
           <v-card-actions>
             <v-btn
               v-if="n.Custodian == 'Lisa'"
-               v-show="$vuetify.breakpoint.mdAndUp"
+              v-show="$vuetify.breakpoint.mdAndUp"
               to="/WarMemorial"
               >Read More</v-btn
             >
 
-             <v-btn
+            <v-btn
               v-if="n.Custodian == 'Lisa'"
-               v-show="$vuetify.breakpoint.smAndDown"
+              v-show="$vuetify.breakpoint.smAndDown"
               to="/WarMemorial"
               >Read</v-btn
             >
@@ -95,7 +98,7 @@
               >Read More</v-btn
             >
 
-               <v-btn
+            <v-btn
               v-if="n.Custodian == 'Bri'"
               v-show="$vuetify.breakpoint.smAndDown"
               to="/Park"
@@ -103,41 +106,41 @@
             >
             <v-btn
               v-if="n.Custodian == 'lane'"
-               v-show="$vuetify.breakpoint.mdAndUp"
+              v-show="$vuetify.breakpoint.mdAndUp"
               to="/Rediscovered"
               >Read More</v-btn
             >
 
-               <v-btn
+            <v-btn
               v-if="n.Custodian == 'lane'"
-               v-show="$vuetify.breakpoint.smAndDown"
+              v-show="$vuetify.breakpoint.smAndDown"
               to="/Rediscovered"
               >Read</v-btn
             >
             <v-btn
               v-if="n.Custodian == 'Nadia'"
-               v-show="$vuetify.breakpoint.mdAndUp"
+              v-show="$vuetify.breakpoint.mdAndUp"
               to="/Historical"
               >Read More</v-btn
             >
 
-               <v-btn
+            <v-btn
               v-if="n.Custodian == 'Nadia'"
-               v-show="$vuetify.breakpoint.smAndDown"
+              v-show="$vuetify.breakpoint.smAndDown"
               to="/Historical"
               >Read</v-btn
             >
 
             <v-btn
               v-if="n.Custodian == 'Asma'"
-               v-show="$vuetify.breakpoint.mdAndUp"
+              v-show="$vuetify.breakpoint.mdAndUp"
               to="/Hidden"
               >Read More</v-btn
             >
 
-             <v-btn
+            <v-btn
               v-if="n.Custodian == 'Asma'"
-               v-show="$vuetify.breakpoint.smAndDown"
+              v-show="$vuetify.breakpoint.smAndDown"
               to="/Hidden"
               >Read</v-btn
             >
@@ -158,6 +161,15 @@
               <v-btn
                 x-small
                 class="btn-txt"
+                color="#4F695E"
+                align-right
+                v-if="n['Tag Three'] == 'Park'"
+                @click.prevent="filter('park')"
+                >{{ n["Tag Three"] }}</v-btn
+              >
+              <v-btn
+                x-small
+                class="btn-txt"
                 color="#351F1A"
                 align-right
                 v-if="n['Tag One'] == 'War'"
@@ -165,7 +177,16 @@
                 >{{ n["Tag One"] }}</v-btn
               >
 
-               <v-btn
+                <v-btn
+                x-small
+                class="btn-txt"
+                color="#351F1A"
+                align-right
+                v-if="n['Tag Two'] == 'War'"
+                @click.prevent="filter('war')"
+                >{{ n["Tag Two"] }}</v-btn
+              >
+              <v-btn
                 x-small
                 class="btn-txt"
                 color="#41444E"
@@ -175,21 +196,19 @@
                 >{{ n["Tag One"] }}</v-btn
               >
 
-               <v-btn
+              <v-btn
                 x-small
                 class="btn-txt"
                 color="#71474E"
-                
                 align-right
-                v-if="n['Tag One'] == 'Embodied'"
-                @click.prevent="filter('embodied')"
+                v-if="n['Tag One'] == 'Embodiment'"
+                @click.prevent="filter('embodiment')"
                 >{{ n["Tag One"] }}</v-btn
               >
               <v-btn
                 x-small
                 class="btn-txt"
                 color="#4F695E"
-                
                 align-right
                 v-if="n['Tag One'] == 'African'"
                 @click.prevent="filter('african')"
@@ -199,7 +218,6 @@
                 x-small
                 class="btn-txt"
                 color="#562119"
-                
                 align-right
                 v-if="n['Tag One'] == 'Historical'"
                 @click.prevent="filter('historical')"
@@ -210,18 +228,16 @@
                 x-small
                 class="btn-txt"
                 color="#772318"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Punishment'"
                 @click.prevent="filter('punishment')"
                 >{{ n["Tag Two"] }}</v-btn
               >
-        
+
               <v-btn
                 x-small
                 class="btn-txt"
                 color="#C51"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Military'"
                 @click.prevent="filter('military')"
@@ -231,39 +247,45 @@
                 x-small
                 class="btn-txt"
                 color="#263"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Expansion'"
                 @click.prevent="filter('expansion')"
                 >{{ n["Tag Two"] }}</v-btn
               >
-                <v-btn
+              <v-btn
                 x-small
                 class="btn-txt"
                 color="#71474E"
-                
                 align-right
-                v-if="n['Tag Two'] == 'Embodied'"
-                @click.prevent="filter('embodied')"
+                v-if="n['Tag Two'] == 'Embodiment'"
+                @click.prevent="filter('embodiment')"
                 >{{ n["Tag Two"] }}</v-btn
               >
 
-                  <v-btn
+               <v-btn
+                x-small
+                class="btn-txt"
+                color="#71474E"
+                align-right
+                v-if="n['Tag Three'] == 'Embodiment'"
+                @click.prevent="filter('embodiment')"
+                >{{ n["Tag Three"] }}</v-btn
+              >
+
+              <v-btn
                 x-small
                 class="btn-txt"
                 color="#41444E"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Power'"
                 @click.prevent="filter('power')"
                 >{{ n["Tag Two"] }}</v-btn
               >
 
-                 <v-btn
+              <v-btn
                 x-small
                 class="btn-txt"
                 color="#AC7B84"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Media'"
                 @click.prevent="filter('media')"
@@ -274,7 +296,6 @@
                 x-small
                 class="btn-txt"
                 color="#32E"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Biography'"
                 @click.prevent="filter('biography')"
@@ -285,32 +306,36 @@
                 x-small
                 class="btn-txt"
                 color="#827"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Quotes'"
                 @click.prevent="filter('quotes')"
                 >{{ n["Tag Two"] }}</v-btn
               >
 
-
               <v-btn
                 x-small
                 class="btn-txt"
                 color="#D58936"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Infrastructure'"
                 @click.prevent="filter('infrastrcuture')"
                 >{{ n["Tag Two"] }}</v-btn
               >
 
-          
+              <v-btn
+                x-small
+                class="btn-txt"
+                color="#D58936"
+                align-right
+                v-if="n['Tag Three'] == 'Infrastructure'"
+                @click.prevent="filter('infrastrcuture')"
+                >{{ n["Tag Three"] }}</v-btn
+              >
 
               <v-btn
                 x-small
                 class="btn-txt"
                 color="#795"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Reinterment'"
                 @click.prevent="filter('reinterment')"
@@ -321,29 +346,46 @@
                 x-small
                 class="btn-txt"
                 color="#795"
-                
                 align-right
                 v-if="n['Tag Three'] == 'Reinterment'"
                 @click.prevent="filter('reinterment')"
                 >{{ n["Tag Three"] }}</v-btn
               >
 
-                <v-btn
+              <v-btn
                 x-small
                 class="btn-txt"
                 color="#A89B61"
-                
                 align-right
                 v-if="n['Tag Two'] == 'Hidden'"
                 @click.prevent="filter('hidden')"
                 >{{ n["Tag Two"] }}</v-btn
               >
 
+              <v-btn
+                x-small
+                class="btn-txt"
+                color="#A89B61"
+                align-right
+                v-if="n['Tag One'] == 'Queens'"
+                @click.prevent="filter('Queens')"
+                >{{ n["Tag One"] }}</v-btn
+              >
+
                <v-btn
                 x-small
                 class="btn-txt"
                 color="#A89B61"
-                
+                align-right
+                v-if="n['Tag One'] == 'Hidden'"
+                @click.prevent="filter('hidden')"
+                >{{ n["Tag One"] }}</v-btn
+              >
+
+              <v-btn
+                x-small
+                class="btn-txt"
+                color="#A89B61"
                 align-right
                 v-if="n['Tag Three'] == 'Hidden'"
                 @click.prevent="filter('hidden')"
@@ -353,7 +395,6 @@
                 x-small
                 class="btn-txt"
                 color="#789"
-                
                 align-right
                 v-if="n['Tag Three'] == 'Hangings'"
                 @click.prevent="filter('hangings')"
@@ -362,18 +403,35 @@
               <v-btn
                 x-small
                 class="btn-txt"
+                color="#789"
+                align-right
+                v-if="n['Tag Two'] == 'Hangings'"
+                @click.prevent="filter('hangings')"
+                >{{ n["Tag Two"] }}</v-btn
+              >
+              <v-btn
+                x-small
+                class="btn-txt"
                 color="#C51"
-                
                 align-right
                 v-if="n['Tag Three'] == 'Disease'"
                 @click.prevent="filter('disease')"
                 >{{ n["Tag Three"] }}</v-btn
               >
+
+              <v-btn
+                x-small
+                class="btn-txt"
+                color="#C51"
+                align-right
+                v-if="n['Tag Two'] == 'Disease'"
+                @click.prevent="filter('disease')"
+                >{{ n["Tag Two"] }}</v-btn
+              >
               <v-btn
                 x-small
                 class="btn-txt"
                 color="#263"
-                
                 align-right
                 v-if="n['Tag Three'] == 'Expansion'"
                 @click.prevent="filter('expansion')"
@@ -384,7 +442,6 @@
                 x-small
                 class="btn-txt"
                 color="#C55"
-                
                 align-right
                 v-if="n['Tag Three'] == 'Beautification'"
                 @click.prevent="filter('beautification')"
@@ -440,10 +497,7 @@ export default {
   methods: {
     filter: function (name) {
       this.v_timeline = this.v_timeline.filter((item) => {
-        if (
-          item["Tag Two"] != null &&
-          item["Tag Three"]!= null
-        )
+        if (item["Tag Two"] != null && item["Tag Three"] != null)
           return (
             item["Tag One"].toLowerCase() == name ||
             item["Tag Two"].toLowerCase() == name ||
@@ -459,11 +513,13 @@ export default {
             item["Tag One"].toLowerCase() == name ||
             item["Tag Two"].toLowerCase() == name
           );
-           else if (item["Tag Three"] == null && item["Tag Two"] == null)
-          return (
-            item["Tag One"].toLowerCase() == name
-          );
+        else if (item["Tag Three"] == null && item["Tag Two"] == null)
+          return item["Tag One"].toLowerCase() == name;
       });
+    },
+
+    unfilter:function() {
+      this.v_timeline=v_timeline
     },
     filterTwo: function (name) {
       this.v_timeline = this.v_timeline.filter((item) => {
@@ -635,8 +691,9 @@ export default {
             return 70;
           } else if (d.y == 2) {
             return 80;
+          } else {
+            return 90;
           }
-          else {return 90}
         })
         .attr("class", (d) => "circle" + d["Tag One"] + d.Date)
         .on("mouseover", function (d) {
@@ -665,7 +722,7 @@ export default {
 
 <style>
 .theme--dark.v-timeline:before {
-  background: black!important
+  background: black !important;
 }
 .v-app-bar {
   position: fixed;
@@ -687,6 +744,4 @@ export default {
   stroke: darkgray;
   fill: black;
 }
-
-
 </style>

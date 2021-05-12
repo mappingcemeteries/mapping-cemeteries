@@ -38,20 +38,20 @@
              <span>{{n.Caption}} <br /> {{n.Attribution}}</span>
             </v-tooltip>
             <v-list-item-content>
-              <div class="overline mb-4"></div>
+              <div class="overline mb-4" style="word-break: normal"></div>
               <v-list-item-title class="headline mb-1">{{
                 n.Title
               }}</v-list-item-title>
               <div>{{ n["Text Box"] }}</div>
-              <v-list-item-title class="headline mb-5">{{
+              <v-list-item-title style="word-break: normal" class="headline mb-5">{{
                 n.SubTitle1
               }}</v-list-item-title>
               <div>{{ n.SubText1 }}</div>
-              <v-list-item-title class="headline mb-5">{{
+              <v-list-item-title style="word-break: normal" class="headline mb-5">{{
                 n.SubTitle2
               }}</v-list-item-title>
               <div>{{ n.SubText2 }}</div>
-              <v-list-item-title class="headline mb-5">{{
+              <v-list-item-title style="word-break: normal" class="headline mb-5">{{
                 n.SubTitle3
               }}</v-list-item-title>
               <div>{{ n.SubText3 }}</div>
