@@ -2,7 +2,7 @@
   <div class="Hidden">
     <v-card>
       <v-card-title class="justify-center title"
-        >
+        >City Shoe-Hangings
       </v-card-title>
     </v-card>
     <v-timeline dark dense class="mx-lg-auto">
@@ -17,9 +17,10 @@
         </template>
         <v-card class="mx-auto" outlined>
           <v-list-item>
-           <v-tooltip bottom > 
+            <v-tooltip bottom>
               <template #activator="{ on }">
-                <v-list-item-avatar v-on="on"
+                <v-list-item-avatar
+                  v-on="on"
                   tile
                   size="300"
                   color="grey"
@@ -30,7 +31,10 @@
                   <v-img :src="n['Image Link']"></v-img>
                 </v-list-item-avatar>
               </template>
-              <span>{{n.Caption}} <br /> {{n.Attribution}}</span>
+              <span
+                >{{ n.Caption }} <br />
+                {{ n.Attribution }}</span
+              >
             </v-tooltip>
             <v-list-item-content>
               <div class="overline mb-4"></div>
@@ -81,7 +85,7 @@ export default {
 
 <style>
 .theme--dark.v-timeline:before {
-  background: black!important
+  background: black !important;
 }
 </style>
 

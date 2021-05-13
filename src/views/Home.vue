@@ -1,8 +1,5 @@
 <template>
-    <div id="map" class="home">
-     
-    </div>
-
+  <div id="map" class="home"></div>
 </template>
 
 <script>
@@ -40,10 +37,17 @@ export default {
     map.on("load", function () {
       map.on("click", "map-an0td9", function (e) {
         var caption = e.features[0].properties.Caption;
-        if (caption == "New York Marble Cemetery") { window.location.href = '#/Historical'
-        } else if (caption == "African Burial Ground National Monument") {window.location.href = '#/Rediscovered'
-        } else if (caption == "City Hall Park") { window.location.href = '#/Park'
-        } else if (caption == "General Worth Monument") { window.location.href = '#/WarMemorial'
+        if (caption == "New York Marble Cemetery") {
+          window.location.href = "#/Historical";
+        } else if (caption == "African Burial Ground National Monument") {
+          window.location.href = "#/Rediscovered";
+        } else if (caption == "City Hall Park") {
+          window.location.href = "#/Park";
+        } else if (caption == "General Worth Monument") {
+          window.location.href = "#/WarMemorial";
+        }
+        else {
+          window.location.href = "#/Hidden";
         }
       });
       map.on("mouseenter", "map-an0td9", function (e) {
@@ -53,7 +57,7 @@ export default {
         var coordinates = e.features[0].geometry.coordinates.slice();
         var title = e.features[0].properties.Caption;
         var gravatar = e.features[0].properties.Gravatar;
-        console.log("lol "+e.features[0].properties.Gravatar)
+        console.log("lol " + e.features[0].properties.Gravatar);
 
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
@@ -61,7 +65,13 @@ export default {
 
         popup
           .setLngLat(coordinates)
-          .setHTML("<h3>" + title + "</h3><img style=' border:2px solid black; width:100px;  display: block; margin-left: auto; margin-right: auto; height:100px;  border-radius: 50%; ' src="+gravatar+"></img>")
+          .setHTML(
+            "<h3>" +
+              title +
+              "</h3><img style=' border:2px solid black; width:100px;  display: block; margin-left: auto; margin-right: auto; height:100px;  border-radius: 50%; ' src=" +
+              gravatar +
+              "></img>"
+          )
           .addTo(map);
       });
 
@@ -77,7 +87,7 @@ export default {
 .home {
   width: 100%;
   height: 100%;
-  overflow-y: hidden
+  overflow-y: hidden;
 }
 p {
   font-family: "Montserrat";
