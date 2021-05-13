@@ -1,6 +1,6 @@
 <template>
   <div class="timeline">
-    <v-app-bar height="120" width="2000" window dark>
+    <v-app-bar height="120" width="20000" window dark>
       <div id="res" style="width: 100%; z-index: 10000"></div>
        <v-btn light  @click="unfilter" >Reset</v-btn>
     </v-app-bar>
@@ -318,7 +318,7 @@
                 color="#D58936"
                 align-right
                 v-if="n['Tag Two'] == 'Infrastructure'"
-                @click.prevent="filter('infrastrcuture')"
+                @click.prevent="filter('infrastructure')"
                 >{{ n["Tag Two"] }}</v-btn
               >
 
@@ -328,7 +328,7 @@
                 color="#D58936"
                 align-right
                 v-if="n['Tag Three'] == 'Infrastructure'"
-                @click.prevent="filter('infrastrcuture')"
+                @click.prevent="filter('infrastructure')"
                 >{{ n["Tag Three"] }}</v-btn
               >
 

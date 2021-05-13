@@ -29,7 +29,7 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <v-footer dark fixed height="auto" color="" width="10%">
+    <v-footer dark fixed height="auto" color="" width="15%">
       <v-btn
         v-for="(icon, i) in icons"
         :key="i"

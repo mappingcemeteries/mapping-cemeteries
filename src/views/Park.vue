@@ -16,7 +16,7 @@
         </template>
         <v-card class="mx-auto" outlined>
           <v-list-item>
-         <v-tooltip bottom>
+         <v-tooltip bottom >
               <template #activator="{ on }">
                 <v-list-item-avatar v-on="on"
                   tile
@@ -33,9 +33,11 @@
             </v-tooltip>
             <v-list-item-content>
               <div class="overline mb-4"></div>
+              
               <v-list-item-title class="headline mb-1">{{
                 n.Title
               }}</v-list-item-title>
+              <v-spacer></v-spacer>
               <div>{{ n["Text Box"] }}</div>
               <v-list-item-title class="headline mb-5">{{
                 n.SubTitle1
@@ -81,5 +83,8 @@ export default {
 <style>
 .theme--dark.v-timeline:before {
   background: black!important
+}
+.v-tooltip.content {
+  opacity: 1 !important;
 }
 </style>

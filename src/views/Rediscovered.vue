@@ -22,7 +22,7 @@
         </template>
         <v-card class="mx-auto" outlined>
           <v-list-item>
-           <v-tooltip bottom>
+           <v-tooltip bottom >
               <template #activator="{ on }">
                 <v-list-item-avatar v-on="on"
                   tile

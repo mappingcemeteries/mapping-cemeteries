@@ -2,7 +2,7 @@
   <div class="Hidden">
     <v-card>
       <v-card-title class="justify-center title"
-        >City Hall Park: Death on the Commons
+        >
       </v-card-title>
     </v-card>
     <v-timeline dark dense class="mx-lg-auto">
@@ -17,7 +17,7 @@
         </template>
         <v-card class="mx-auto" outlined>
           <v-list-item>
-           <v-tooltip bottom>
+           <v-tooltip bottom > 
               <template #activator="{ on }">
                 <v-list-item-avatar v-on="on"
                   tile

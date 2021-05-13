@@ -14,12 +14,12 @@
               necropolitical, historical, and infrastructural lens, and asking
               the fundamental question of who gets to be remembered after death.
               Check out
-              <a href="https://mappingcemeteries.commons.gc.cuny.edu/about/">
+              <a href="https://mappingcemeteries.commons.gc.cuny.edu/">
                 Making Mapping Cemeteries
               </a>
-              to learn more about how we conceived of and built this project and
+               to learn more about how we conceived of and built this project and
               view our
-              <a href="https://mappingcemeteries.commons.gc.cuny.edu/about/">
+              <a href="https://mappingcemeteries.commons.gc.cuny.edu/bibliography/">
                 bibliography </a
               >.
             </v-card-text>
@@ -53,6 +53,13 @@
               <v-img
                 class="ml-10 mr-10"
                 src="https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/04/Lane-Quote-2.jpeg"
+              ></v-img>
+            </v-col>
+              <v-col cols="12" md="4">
+              <v-img
+                class="ml-10 mr-10"
+                src="
+            https://mappingcemeteries.commons.gc.cuny.edu/wp-content/blogs.dir/16656/files/2021/05/Deathscape-Edited-Def-with-Team-Credit.jpeg"
               ></v-img>
             </v-col>
           </v-row>
@@ -258,7 +265,7 @@
             <v-card-text>
               Learn more about how we made this project on our companion site, 
               <a href="https://mappingcemeteries.commons.gc.cuny.edu/">
-                Making Mapping Cemeteries </a
+                Making Mapping Cemeteries</a
               >, including how to
               <a
                 href="https://mappingcemeteries.commons.gc.cuny.edu/contact-us/"
