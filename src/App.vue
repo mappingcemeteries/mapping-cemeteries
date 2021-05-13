@@ -17,11 +17,11 @@
         >Map</v-btn
       >
       <v-btn small plain text dark v-show="$vuetify.breakpoint.mdAndUp" elevation="5" to="/timeline">Timeline</v-btn>
-        <v-btn x-small plain text dark v-show="$vuetify.breakpoint.smAndDown" style='font-size: 8px;' elevation="5" class="ml-auto" to="/"
+        <v-btn x-small plain text dark v-show="$vuetify.breakpoint.smAndDown" style='font-size: 8px;' elevation="5" class="ml-auto" to="/timeline"
         >Timeline</v-btn
       >
       <v-btn small plain text dark v-show="$vuetify.breakpoint.mdAndUp" elevation="5" to="/about">About</v-btn>
-        <v-btn x-small plain text dark v-show="$vuetify.breakpoint.smAndDown" style='font-size: 8px;' elevation="5" class="ml-auto" to="/"
+        <v-btn x-small plain text dark v-show="$vuetify.breakpoint.smAndDown" style='font-size: 8px;' elevation="5" class="ml-auto" to="/about"
         >About</v-btn
       >
     </v-app-bar>
